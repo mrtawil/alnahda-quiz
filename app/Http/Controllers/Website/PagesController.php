@@ -26,4 +26,9 @@ class PagesController extends Controller
     {
         return view('website.pages.result');
     }
+
+    public function claim()
+    {
+        return view('website.pages.claim');
+    }
 }

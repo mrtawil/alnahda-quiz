@@ -18,4 +18,5 @@ Route::controller(PagesController::class)->group(function () {
     Route::get('/', 'welcome');
     Route::get('/quiz', 'quiz');
     Route::get('/result', 'result');
+    Route::get('/claim', 'claim');
 });
