@@ -88,6 +88,10 @@
 }
 
 /* Result Page */
+.result.page {
+    padding-top: 60px;
+}
+
 .result .intro-img-container {
     display: flex;
     justify-content: center;
@@ -99,3 +103,71 @@
     height: 150px;
     object-fit: cover;
 }
+
+.result .title {
+    font-size: 44px;
+    margin-top: 20px;
+}
+
+.result .title-description {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.result .instagram-container {
+    margin-top: 36px;
+}
+
+.result .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result .form {
+    width: 275px;
+    margin-top: 30px;
+    border: 1px solid #000;
+}
+
+.result .form-header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.result .form-body {
+    padding: 30px 20px;
+    background-color: aliceblue;
+}
+
+.result .form-input-container:not(:first-child) {
+    margin-top: 20px;
+}
+
+.result .form-label {
+    display: block;
+}
+
+.result .form-input-text {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.result .form-submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.result .form-submit {
+    padding: 8px 40px;
+    background-color: #000;
+    color: #fff;
+}
+
