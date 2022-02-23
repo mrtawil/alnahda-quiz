@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::controller(PagesController::class)->group(function () {
-    Route::get('/welcome', 'welcome');
+    Route::get('/', 'welcome');
     Route::get('/quiz', 'quiz');
     Route::get('/result', 'result');
 });
