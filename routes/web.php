@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Website\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(PagesController::class)->group(function () {
+    Route::get('/welcome', 'welcome');
+    Route::get('/quiz', 'quiz');
+    Route::get('/result', 'result');
 });
