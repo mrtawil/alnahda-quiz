@@ -12,6 +12,7 @@
     padding: 100px 30px 70px 30px;
 }
 
+/* Welcome Page */
 .welcome .title {
     font-size: 70px;
 }
@@ -44,6 +45,7 @@
     margin-top: 16px;
 }
 
+/* Quiz Page */
 .quiz .question-counter {
     font-size: 20px;
 }
@@ -83,4 +85,17 @@
 
 .quiz .option-text {
     font-size: 16px;
+}
+
+/* Result Page */
+.result .intro-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result .intro-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
