@@ -19,5 +19,6 @@ Route::group(['controller' => PagesController::class, 'as' => 'pages.'], functio
     Route::get('/quiz', 'quiz')->name('quiz');;
     Route::post('/result', 'result')->name('result');;
     Route::get('/result', 'result')->name('result');;
+    Route::post('/claim', 'claim')->name('claim');;
     Route::get('/claim', 'claim')->name('claim');;
 });

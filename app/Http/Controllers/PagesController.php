@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Services\ClaimService;
 use App\Http\Services\QuizService;
 use App\Http\Services\ResultService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Session;
 
 class PagesController extends Controller
 {
@@ -39,8 +41,21 @@ class PagesController extends Controller
         return view('pages.result', $data);
     }
 
-    public function claim()
+    public function claim(ClaimService $claimService, Request $request)
     {
-        return view('pages.claim');
+        if (!$request->input('name') || !$request->input('email') || Session::get('claim_loaded')) {
+            return to_route('pages.welcome');
+        }
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:191'],
+            'email' => ['required', 'email', 'max:191'],
+        ]);
+
+        $data['claim'] = $claimService->claim();
+
+        Session::flash('claim_loaded', true);
+
+        return view('pages.claim', $data);
     }
 }

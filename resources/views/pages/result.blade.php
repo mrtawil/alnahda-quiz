@@ -60,24 +60,25 @@
             </blockquote>
         </div>
         <div class="form-container">
-            <div class="form">
+            <form action="{{ route('pages.claim') }}" method="POST" class="form">
+                @csrf
                 <div class="form-header">
                     <div class="form-title">قسيمة الهدية</div>
                 </div>
                 <div class="form-body">
                     <div class="form-input-container">
                         <label for="name" class="form-label">الاسم <span class="text-danger">*</span></label>
-                        <input type="text" id="name" class="form-input-text">
+                        <input type="text" name="name" id="name" class="form-input-text" required>
                     </div>
                     <div class="form-input-container">
                         <label for="email" class="form-label">البريد الإلكتروني <span class="text-danger">*</span></label>
-                        <input type="email" id="email" class="form-input-text">
+                        <input type="email" name="email" id="email" class="form-input-text" required>
                     </div>
                     <div class="form-submit-container">
                         <button type="submit" class="form-submit">أرسل</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 @endsection
