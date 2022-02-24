@@ -1,6 +1,5 @@
 /* General */
 #app {
-    direction: rtl;
     width: 100%;
     max-width: 576px;
     margin: 0 auto;
@@ -34,7 +33,11 @@
 }
 
 .welcome .action-button {
-    padding: 14px 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 220px;
     color: #fff;
     background-color: #000;
     text-decoration: none;
@@ -43,6 +46,16 @@
 
 .welcome .action-description {
     margin-top: 16px;
+}
+
+.welcome .action-locale {
+    margin-top: 8px;
+    color: grey;
+    text-decoration: none;
+}
+
+.welcome .action-locale:hover {
+    color: rgb(99, 99, 99);
 }
 
 /* Quiz Page */
@@ -256,6 +269,11 @@
     color: #000;
     text-decoration: none;
     margin-top: 2px;
+}
+
+/* Arabic */
+html[lang='ar'] #app {
+    direction: rtl;
 }
 
 /* Animations */

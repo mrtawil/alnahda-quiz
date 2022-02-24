@@ -63,19 +63,19 @@
             <form action="{{ route('pages.claim') }}" method="POST" class="form">
                 @csrf
                 <div class="form-header">
-                    <div class="form-title">قسيمة الهدية</div>
+                    <div class="form-title">@lang('strings.Gift voucher')</div>
                 </div>
                 <div class="form-body">
                     <div class="form-input-container">
-                        <label for="name" class="form-label">الاسم <span class="text-danger">*</span></label>
+                        <label for="name" class="form-label">@lang('strings.Name') <span class="text-danger">*</span></label>
                         <input type="text" name="name" id="name" class="form-input-text" required>
                     </div>
                     <div class="form-input-container">
-                        <label for="email" class="form-label">البريد الإلكتروني <span class="text-danger">*</span></label>
+                        <label for="email" class="form-label">@lang('strings.Email') <span class="text-danger">*</span></label>
                         <input type="email" name="email" id="email" class="form-input-text" required>
                     </div>
                     <div class="form-submit-container">
-                        <button type="submit" class="form-submit">أرسل</button>
+                        <button type="submit" class="form-submit">@lang('strings.Send')</button>
                     </div>
                 </div>
             </form>

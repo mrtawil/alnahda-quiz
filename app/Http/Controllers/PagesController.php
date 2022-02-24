@@ -12,6 +12,16 @@ use Illuminate\Support\Facades\Session;
 
 class PagesController extends Controller
 {
+    public function language(Request $request, $locale)
+    {
+        $langauges = collect(config('alnahda.languages'));
+        if ($langauges->contains($locale)) {
+            Session::put('locale', $locale);
+        }
+
+        return to_route('pages.welcome');
+    }
+
     public function welcome()
     {
         return view('pages.welcome');
