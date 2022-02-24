@@ -10,6 +10,7 @@ class QuizService
     protected $request;
     protected $quizzes;
     protected $quizzes_diff;
+    protected $quiz;
     protected $cookie;
 
     public function __construct(Request $request)
@@ -19,6 +20,7 @@ class QuizService
         $this->setCookie();
         $this->setQuizzes();
         $this->setQuizzesDiff();
+        $this->setQuiz();
     }
 
     public function setQuizzes($quizzes = null)
@@ -37,6 +39,21 @@ class QuizService
         }
 
         $this->quizzes_diff = $quizzes_diff;
+    }
+
+    public function setQuiz($quiz = null)
+    {
+        if ($quiz === null) {
+            if ($this->quizzesDiff()->count() >= 1) {
+                $this->quiz = $this->quizzesDiff()->random();
+                return;
+            }
+
+            $this->quiz = $this->quizzes()->random();
+            return;
+        }
+
+        $this->quiz = $quiz;
     }
 
     public function setCookie($cookie = null)
@@ -58,18 +75,14 @@ class QuizService
         return $this->quizzes_diff;
     }
 
+    public function quiz(): array
+    {
+        return $this->quiz;
+    }
+
     public function cookie(): Collection
     {
         return $this->cookie;
-    }
-
-    public function quiz()
-    {
-        if ($this->quizzesDiff()->count() >= 1) {
-            return $this->quizzesDiff()->random();
-        }
-
-        return $this->quizzes()->random();
     }
 
     public function newCookie()

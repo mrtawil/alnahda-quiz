@@ -16,11 +16,11 @@ class PagesController extends Controller
 
     public function quiz(QuizService $quizService, Request $request)
     {
-        ray(['old_cookie' => $request->cookie(config('alnahda.cookie_name'))]);
         Cookie::queue(config('alnahda.cookie_name'), $quizService->newCookie(), config('alnahda.cookie_expiration'));
-        ray(['new_cookie' => $quizService->newCookie()]);
 
-        return view('pages.quiz');
+        $data['quiz'] = $quizService->quiz();
+
+        return view('pages.quiz', $data);
     }
 
     public function result()
