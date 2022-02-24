@@ -12,12 +12,12 @@ const app = new Vue({
         setCurrentQuestion: function (index) {
             this.question = this.quiz.questions[index];
         },
-        setQuestionAnswer: function (questionIndex, optionIndex) {
-            this.question_answers[questionIndex] = optionIndex;
+        setQuestionAnswer: function (questionId, optionId) {
+            this.question_answers.push({ question_id: questionId, option_id: optionId });
             console.log({ question_answers: this.question_answers });
         },
-        onNextQuestion: function (optionIndex) {
-            this.setQuestionAnswer(this.question_index, optionIndex);
+        onNextQuestion: function (optionIndex, optionId) {
+            this.setQuestionAnswer(this.question.id, optionId);
             this.addOptionChosen(optionIndex);
             if (this.question_index == this.quiz.questions.length - 1) {
                 alert('quiz is done.');
