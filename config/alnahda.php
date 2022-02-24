@@ -400,20 +400,23 @@ return [
         [
             'min_weight' => 5,
             'title_ar' => 'لَم تطلق العنان لإمكاناتك بعد',
-            'title_en' => 'لَم تطلق العنان لإمكاناتك بعد',
+            'title_en' => 'You haven\'t unleashed your potential yet',
             'description_ar' => 'لنعمل معاً لكسر التحيز وتحقيق المساواة',
+            'description_en' => 'Let\'s work together to break prejudice and achieve equality',
         ],
         [
             'min_weight' => 9,
             'title_ar' => 'أنت قادر على إحداث فرق في مجتمعك',
-            'title_en' => 'أنت قادر على إحداث فرق في مجتمعك',
-            'description_ar' => 'لأنك على الطريق الصحيح لتحقيق المساواة بين الجنسينن',
+            'title_en' => 'You can make a difference in your community',
+            'description_ar' => 'لأنك على الطريق الصحيح لتحقيق المساواة بين الجنسين',
+            'description_en' => 'Because you are on the right path to achieving gender equality',
         ],
         [
             'min_weight' => 13,
             'title_ar' => 'أنت صانع تغيير في مجتمعك',
-            'title_en' => 'أنت صانع تغيير في مجتمعك',
+            'title_en' => 'You are a change maker in your community',
             'description_ar' => 'لأنك تحترم المساواة بين الجنسين من دون أي تحيز',
+            'description_en' => 'Because you respect gender equality without any bias',
         ],
     ]
 ];

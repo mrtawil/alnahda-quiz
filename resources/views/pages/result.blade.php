@@ -6,8 +6,8 @@
             <img class="intro-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
         </div>
         <div class="title-container">
-            <div class="title">{{ $result_message['title_ar'] }}</div>
-            <div class="title-description">{{ $result_message['description_ar'] }}</div>
+            <div class="title">{{ $result_message['title_' . app()->getLocale()] }}</div>
+            <div class="title-description">{{ $result_message['description_' . app()->getLocale()] }}</div>
         </div>
         <div class="instagram-container">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CZ19PX5q4HC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">

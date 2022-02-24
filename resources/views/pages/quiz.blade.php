@@ -10,6 +10,7 @@
             <div class="question-options-container">
                 <div class="option-container" :id="'option-container-'+index" v-for="(option, index) in question.options" v-on:click="onNextQuestion(index, question.id, option.id)">
                     <span class="option-counter">@{{ index + 1 }}</span>
+                    <span class="d-inline-block" style="width: 10px;"></span>
                     <span class="option-text">@{{ option['text_' + locale] }}</span>
                 </div>
             </div>
