@@ -8,7 +8,7 @@
         </div>
         <div class="flex-grow-1"></div>
         <div class="action-container">
-            <a class="action-button" href="javascript:;">إبدا</a>
+            <a class="action-button" href="{{ route('pages.quiz') }}">إبدا</a>
             <div class="action-description">يستغرق دقيقتين فقط</div>
         </div>
     </div>
