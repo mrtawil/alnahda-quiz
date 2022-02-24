@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(PagesController::class)->group(function () {
-    Route::get('/', 'welcome');
-    Route::get('/quiz', 'quiz');
-    Route::get('/result', 'result');
-    Route::get('/claim', 'claim');
+Route::group(['controller' => PagesController::class, 'as' => 'pages.'], function () {
+    Route::get('/', 'welcome')->name('welcome');
+    Route::get('/quiz', 'quiz')->name('quiz');;
+    Route::get('/result', 'result')->name('result');;
+    Route::get('/claim', 'claim')->name('claim');;
 });
