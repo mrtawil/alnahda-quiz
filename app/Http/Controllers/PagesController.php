@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Website;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -12,23 +12,23 @@ class PagesController extends Controller
     {
         // Cookie::queue(config('alnahda.cookie_name'), 'gg', config('alnahda.cookie_expiration'));
 
-        return view('website.pages.welcome');
+        return view('pages.welcome');
     }
 
     public function quiz(Request $request)
     {
         // return $request->cookie(config('alnahda.cookie_name'));
 
-        return view('website.pages.quiz');
+        return view('pages.quiz');
     }
 
     public function result()
     {
-        return view('website.pages.result');
+        return view('pages.result');
     }
 
     public function claim()
     {
-        return view('website.pages.claim');
+        return view('pages.claim');
     }
 }
