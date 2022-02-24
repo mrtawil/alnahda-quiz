@@ -1,3 +1,4 @@
+/* General */
 #app {
     direction: rtl;
     width: 100%;
@@ -7,9 +8,11 @@
 }
 
 .page {
+    display: flex;
+    flex-direction: column;
     position: relative;
     min-height: 100vh;
-    padding: 100px 30px 70px 30px;
+    padding: 70px 30px 120px 30px;
 }
 
 /* Welcome Page */
@@ -24,7 +27,6 @@
 
 .welcome .action-container {
     width: 100%;
-    margin-top: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
