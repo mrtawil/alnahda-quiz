@@ -6,21 +6,33 @@ const app = new Vue({
         question_index: 0,
         question_answers: [],
         question_next_delay: 750, // ms
+        quiz_finish_delay: 750, // ms
         fade_animation_delay: 250, // ms
+        quiz_ended: false,
     },
     methods: {
+        onQuizFinish: function () {
+            document.getElementById('quiz-form').submit();
+        },
         setCurrentQuestion: function (index) {
             this.question = this.quiz.questions[index];
         },
         setQuestionAnswer: function (questionId, optionId) {
             this.question_answers.push({ question_id: questionId, option_id: optionId });
-            console.log({ question_answers: this.question_answers });
         },
         onNextQuestion: function (optionIndex, optionId) {
+            if (this.quiz_ended) {
+                return;
+            }
+
             this.setQuestionAnswer(this.question.id, optionId);
             this.addOptionChosen(optionIndex);
             if (this.question_index == this.quiz.questions.length - 1) {
-                alert('quiz is done.');
+                this.quiz_ended = true;
+
+                setTimeout(() => {
+                    this.onQuizFinish();
+                }, this.quiz_finish_delay);
                 return;
             }
 

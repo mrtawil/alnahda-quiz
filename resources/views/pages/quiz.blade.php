@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <form action="{{ route('pages.submit') }}" method="POST">
+        <form action="{{ route('pages.submit') }}" method="POST" id="quiz-form">
             @csrf
             <input type="hidden" name="quiz_id" :value="quiz.id">
             <input type="hidden" :name="'question_answers['+question_answer.question_id+']'" :value="question_answer.option_id" v-for="question_answer in question_answers">
