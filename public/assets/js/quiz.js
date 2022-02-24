@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
+        locale: locale,
         quiz: quiz,
         question: null,
         question_index: 0,
