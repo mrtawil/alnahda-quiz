@@ -4,6 +4,7 @@ const app = new Vue({
         quiz: quiz,
         question: 0,
         question_index: 0,
+        question_answers: [],
         question_next_delay: 750, // ms
         fade_animation_delay: 250, // ms
     },
@@ -11,7 +12,12 @@ const app = new Vue({
         setCurrentQuestion: function (index) {
             this.question = this.quiz.questions[index];
         },
+        setQuestionAnswer: function (questionIndex, optionIndex) {
+            this.question_answers[questionIndex] = optionIndex;
+            console.log({ question_answers: this.question_answers });
+        },
         onNextQuestion: function (optionIndex) {
+            this.setQuestionAnswer(this.question_index, optionIndex);
             this.addOptionChosen(optionIndex);
             if (this.question_index == this.quiz.questions.length - 1) {
                 alert('quiz is done.');
@@ -20,7 +26,7 @@ const app = new Vue({
 
             setTimeout(() => {
                 this.removeOptionChosen(optionIndex);
-                this.addCurrentQuestionFade();
+                this.addCurrentQuestionFade(this.question_index);
                 setTimeout(() => {
                     this.question_index++;
                     this.setCurrentQuestion(this.question_index);
@@ -45,7 +51,5 @@ const app = new Vue({
     },
     created() {
         this.setCurrentQuestion(0);
-
-        console.log({ quiz: this.quiz, question: this.question, question_index: this.question_index });
     },
 })
