@@ -53,13 +53,14 @@ class PagesController extends Controller
 
     public function claim(ClaimService $claimService, Request $request)
     {
-        if (!$request->input('name') || !$request->input('email') || Session::get('claim_loaded')) {
+        if (!$request->input('name') || !$request->input('email') || $request->input('coffee_shop') || Session::get('claim_loaded')) {
             return to_route('pages.welcome');
         }
 
         $request->validate([
             'name' => ['required', 'string', 'max:191'],
             'email' => ['required', 'email', 'max:191'],
+            'coffee_shop' => ['required', 'string', 'max:191'],
         ]);
 
         $data['claim'] = $claimService->claim();

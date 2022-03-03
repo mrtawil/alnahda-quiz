@@ -38,6 +38,7 @@ class ClaimService
         $claim = Claim::create([
             'name' => $this->name,
             'email' => $this->email,
+            'coffee_shop' => $this->coffee_shop,
         ]);
 
         $this->setClaim($claim);

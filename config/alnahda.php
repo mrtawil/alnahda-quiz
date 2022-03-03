@@ -418,5 +418,17 @@ return [
             'description_ar' => 'لأنك تحترم المساواة بين الجنسين من دون أي تحيز',
             'description_en' => 'Because you respect gender equality without any bias',
         ],
-    ]
+    ],
+    'coffee_shops' => [
+        [
+            'title_key' => 'strings.Respire Lounge, Al Rabie District',
+            'logo' => 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            'value' => 'respire_lounge',
+        ],
+        [
+            'title_key' => 'strings.Huna, Panorama Mall',
+            'logo' => 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            'value' => 'huna',
+        ],
+    ],
 ];

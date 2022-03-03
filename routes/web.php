@@ -20,6 +20,5 @@ Route::group(['controller' => PagesController::class, 'as' => 'pages.'], functio
     Route::post('/result', 'result')->name('result');;
     Route::get('/result', 'result')->name('result');;
     Route::post('/claim', 'claim')->name('claim');;
-    Route::get('/claim', 'claim')->name('claim');;
     Route::get('/{locale}', 'language')->name('language');
 });
