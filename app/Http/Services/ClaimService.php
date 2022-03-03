@@ -9,14 +9,16 @@ class ClaimService
 {
     protected $name;
     protected $email;
+    protected $coffee_shop;
     protected $claim;
 
     public function __construct(Request $request)
     {
         $this->name = $request->input('name');
         $this->email = $request->input('email');
+        $this->coffee_shop = $request->input('coffee_shop');
 
-        if (!$this->name || !$this->email) {
+        if (!$this->name || !$this->email || !$this->coffee_shop) {
             return;
         }
 

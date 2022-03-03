@@ -37,7 +37,8 @@ class PagesController extends Controller
 
     public function result(ResultService $resultService, Request $request)
     {
-        if (!$request->input('quiz_id') || !$request->input('question_answers')) {
+        if (!$request->input('quiz_id') || !$request->input('question_answers') || Session::get('claim_loaded')) {
+            Session::put('claim_loaded', false);
             return to_route('pages.welcome');
         }
 
@@ -48,15 +49,13 @@ class PagesController extends Controller
 
         $data['result_message'] = $resultService->resultMessage();
 
+        Session::put('claim_loaded', true);
+
         return view('pages.result', $data);
     }
 
     public function claim(ClaimService $claimService, Request $request)
     {
-        if (!$request->input('name') || !$request->input('email') || $request->input('coffee_shop') || Session::get('claim_loaded')) {
-            return to_route('pages.welcome');
-        }
-
         $request->validate([
             'name' => ['required', 'string', 'max:191'],
             'email' => ['required', 'email', 'max:191'],
@@ -65,8 +64,6 @@ class PagesController extends Controller
 
         $data['claim'] = $claimService->claim();
 
-        Session::flash('claim_loaded', true);
-
-        return view('pages.claim', $data);
+        return response()->json($data, 200);
     }
 }

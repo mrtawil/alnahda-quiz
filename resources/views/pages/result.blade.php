@@ -13,8 +13,8 @@
             <div class="title">{{ $result_message['title_' . app()->getLocale()] }}</div>
             <div class="title-description">{{ $result_message['description_' . app()->getLocale()] }}</div>
         </div>
-        <div class="form-container">
-            <form action="{{ route('pages.claim') }}" method="POST" class="form">
+        <div class="form-container" v-if="!claim">
+            <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit">
                 @csrf
                 <div class="form-header">
                     <div class="form-title">@lang('strings.Gift voucher')</div>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="form-input-container">
                         <label for="coffee_shop" class="form-label">@lang('strings.Choose your favourire coffee shop to redeem your prize') <span class="text-danger">*</span></label>
-                        <select name="coffee_shop" id="coffee_shop" class="form-control" data-size="5">
+                        <select name="coffee_shop" id="coffee_shop" class="form-control" data-size="5" required>
                             <option value="" selected disabled>@lang('strings.Options')</option>
                             @foreach (config('alnahda.coffee_shops') as $coffee_shop)
                                 <option value="{{ $coffee_shop['value'] }}" data-content="<img class='option-logo' src='{{ $coffee_shop['logo'] }}'><span class='option-text'>@lang($coffee_shop['title_key'])</span>"></option>
@@ -42,6 +42,15 @@
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="claim-container" v-else>
+            <div class="intro-img-container">
+                <img class="intro-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </div>
+            <div class="title">@lang('strings.Free coffee!')</div>
+            <div class="coupun">@lang('strings.Voucher no.') @{{ claim.id }}</div>
+            <div class="description-1">@lang('strings.Screenshot the screen')</div>
+            <div class="description-2">@lang('strings.and show it to the barista')</div>
         </div>
         <div class="instagram-container">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CZ19PX5q4HC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
@@ -93,15 +102,47 @@
                 </div>
             </blockquote>
         </div>
+        <div class="footer-container">
+            <img class="logo-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="social-media-container">
+                <div class="social-links-container">
+                    <img class="social-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img class="social-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img class="social-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <a class="social-link" href="https://alnahda.org">alnahda.org</a>
+            </div>
+            <img class="logo-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        </div>
     </div>
 @endsection
 
 @section('scripts')
+    <script>
+        const claim_url = @json(route('pages.claim'));
+    </script>
     <script async src="//www.instagram.com/embed.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="{{ URL::asset('assets/js/result.js') }}"></script>
     <script>
         $(function() {
             $('#coffee_shop').selectpicker();
         });
+
+        (function() {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
     </script>
 @endsection

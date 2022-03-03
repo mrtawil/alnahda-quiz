@@ -64,7 +64,7 @@
     font-size: 20px;
 }
 
-.question-text-container {
+.quiz .question-text-container {
     min-height: 90px;
 }
 
@@ -206,18 +206,17 @@
     color: #fff;
 }
 
-/* Claim Page */
-.claim.page {
-    padding-top: 40px;
+.result .claim-container {
+    margin-top: 30px;
 }
 
-.claim .intro-img-container {
+.result .claim-container .intro-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.claim .intro-img {
+.result .claim-container .intro-img {
     width: 100%;
     height: 100%;
     max-width: 325px;
@@ -225,60 +224,60 @@
     object-fit: cover;
 }
 
-.claim .title {
+.result .claim-container .title {
     width: 100%;
     text-align: center;
     margin-top: 20px;
     font-size: 44px;
 }
 
-.claim .coupun {
+.result .claim-container .coupun {
     width: 100%;
     text-align: center;
     margin-top: 12px;
     font-size: 16px;
 }
 
-.claim .description-1 {
+.result .claim-container .description-1 {
     width: 100%;
     text-align: center;
     margin-top: 24px;
     font-size: 24;
 }
 
-.claim .description-2 {
+.result .claim-container .description-2 {
     width: 100%;
     text-align: center;
     font-size: 24;
 }
 
-.claim .footer-container {
+.result .footer-container {
     margin-top: 60px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 }
 
-.claim .logo-img {
+.result .footer-container .logo-img {
     width: 75px;
     height: 75px;
 }
 
-.claim .social-media-container {
+.result .footer-container .social-media-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
 }
 
-.claim .social-img {
+.result .footer-container .social-img {
     width: 25px;
     height: 25px;
     margin-right: 5px;
     margin-left: 5px;
 }
 
-.claim .social-link {
+.result .footer-container .social-link {
     font-size: 12px;
     color: #000;
     text-decoration: none;

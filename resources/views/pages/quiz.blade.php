@@ -25,6 +25,5 @@
     <script>
         const quiz = @json($quiz);
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="{{ URL::asset('assets/js/quiz.js') }}"></script>
 @endsection
