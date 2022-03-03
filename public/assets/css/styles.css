@@ -4,6 +4,7 @@
     max-width: 576px;
     margin: 0 auto;
     background-color: antiquewhite;
+    overflow-x: hidden;
 }
 
 .page {
@@ -178,6 +179,20 @@
     border: 1px solid #000;
 }
 
+.result .bootstrap-select a[role='option'] .text {
+    width: 100%;
+}
+
+.result .option-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.result .option-text {
+    margin-left: 10px;
+}
+
 .result .form-submit-container {
     display: flex;
     justify-content: center;
@@ -273,6 +288,19 @@
 /* Arabic */
 html[lang='ar'] #app {
     direction: rtl;
+}
+
+html[lang='ar'] .bootstrap-select .filter-option-inner {
+    text-align: right;
+}
+
+html[lang='ar'] .result .bootstrap-select a[role='option'] .text {
+    text-align: right;
+}
+
+html[lang='ar'] .result .option-text {
+    margin-left: 0;
+    margin-right: 10px;
 }
 
 /* Animations */

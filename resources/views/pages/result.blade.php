@@ -30,10 +30,10 @@
                     </div>
                     <div class="form-input-container">
                         <label for="coffee_shop" class="form-label">@lang('strings.Choose your favourire coffee shop to redeem your prize') <span class="text-danger">*</span></label>
-                        <select name="coffee_shop" id="coffee_shop" class="form-control">
+                        <select name="coffee_shop" id="coffee_shop" class="form-control" data-size="5">
                             <option value="" selected disabled>@lang('strings.Options')</option>
-                            <option value="respire_lounge">@lang('strings.Respire Lounge, Al Rabie District')</option>
-                            <option value="huna">@lang('strings.Huna, Panorama Mall')</option>
+                            <option value="respire_lounge" data-content="<img class='option-logo' src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'><span class='option-text'>@lang('strings.Respire Lounge, Al Rabie District')</span>"></option>
+                            <option value="huna" data-content="<img class='option-logo' src='https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'><span class='option-text'>@lang('strings.Huna, Panorama Mall')</span>"></option>
                         </select>
                     </div>
                     <div class="form-submit-container">
