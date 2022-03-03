@@ -77,12 +77,7 @@ class QuizService
 
     public function quiz(): array
     {
-        $this->quiz['questions'] = collect($this->quiz['questions'])
-            ->shuffle()
-            ->map(function ($question) {
-                $question['options'] = collect($question['options'])->shuffle();
-                return $question;
-            });
+        $this->quiz['questions'] = collect($this->quiz['questions'])->shuffle();;
 
         return $this->quiz;
     }
