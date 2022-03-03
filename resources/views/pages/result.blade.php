@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('head')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+@endsection
+
 @section('content')
     <div class="result page">
         <div class="intro-img-container">
@@ -8,6 +12,35 @@
         <div class="title-container">
             <div class="title">{{ $result_message['title_' . app()->getLocale()] }}</div>
             <div class="title-description">{{ $result_message['description_' . app()->getLocale()] }}</div>
+        </div>
+        <div class="form-container">
+            <form action="{{ route('pages.claim') }}" method="POST" class="form">
+                @csrf
+                <div class="form-header">
+                    <div class="form-title">@lang('strings.Gift voucher')</div>
+                </div>
+                <div class="form-body">
+                    <div class="form-input-container">
+                        <label for="name" class="form-label">@lang('strings.Name') <span class="text-danger">*</span></label>
+                        <input type="text" name="name" id="name" class="form-input-text form-control" required>
+                    </div>
+                    <div class="form-input-container">
+                        <label for="email" class="form-label">@lang('strings.Email') <span class="text-danger">*</span></label>
+                        <input type="email" name="email" id="email" class="form-input-text form-control" required>
+                    </div>
+                    <div class="form-input-container">
+                        <label for="coffee_shop" class="form-label">@lang('strings.Choose your favourire coffee shop to redeem your prize') <span class="text-danger">*</span></label>
+                        <select name="coffee_shop" id="coffee_shop" class="form-control">
+                            <option value="" selected disabled>@lang('strings.Options')</option>
+                            <option value="respire_lounge">@lang('strings.Respire Lounge, Al Rabie District')</option>
+                            <option value="huna">@lang('strings.Huna, Panorama Mall')</option>
+                        </select>
+                    </div>
+                    <div class="form-submit-container">
+                        <button type="submit" class="form-submit">@lang('strings.Send')</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="instagram-container">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CZ19PX5q4HC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
@@ -59,30 +92,15 @@
                 </div>
             </blockquote>
         </div>
-        <div class="form-container">
-            <form action="{{ route('pages.claim') }}" method="POST" class="form">
-                @csrf
-                <div class="form-header">
-                    <div class="form-title">@lang('strings.Gift voucher')</div>
-                </div>
-                <div class="form-body">
-                    <div class="form-input-container">
-                        <label for="name" class="form-label">@lang('strings.Name') <span class="text-danger">*</span></label>
-                        <input type="text" name="name" id="name" class="form-input-text" required>
-                    </div>
-                    <div class="form-input-container">
-                        <label for="email" class="form-label">@lang('strings.Email') <span class="text-danger">*</span></label>
-                        <input type="email" name="email" id="email" class="form-input-text" required>
-                    </div>
-                    <div class="form-submit-container">
-                        <button type="submit" class="form-submit">@lang('strings.Send')</button>
-                    </div>
-                </div>
-            </form>
-        </div>
     </div>
 @endsection
 
 @section('scripts')
     <script async src="//www.instagram.com/embed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script>
+        $(function() {
+            $('#coffee_shop').selectpicker();
+        });
+    </script>
 @endsection
