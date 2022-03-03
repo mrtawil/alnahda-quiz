@@ -108,7 +108,7 @@
 
 /* Result Page */
 .result.page {
-    padding-top: 40px;
+    padding: 40px 30px 40px 30px;
 }
 
 .result .intro-img-container {

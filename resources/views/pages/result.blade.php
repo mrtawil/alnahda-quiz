@@ -43,7 +43,7 @@
                 </div>
             </form>
         </div>
-        <div class="claim-container" v-else>
+        <div class="claim-container fade-in" v-else>
             <div class="intro-img-container">
                 <img class="intro-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
             </div>
