@@ -36,6 +36,7 @@
     --font-arabic: '29LT-Azer';
     --color-white: #fff;
     --color-purple-text: #4E3079;
+    --color-purple-background-light: #6F43A8;
     --color-purple-background-strong: #381E60;
 }
 
@@ -220,14 +221,15 @@ html[lang='ar'] .quiz .question-text-container {
 .quiz .option-container {
     cursor: pointer;
     width: 100%;
-    border: 1px solid #000;
     padding: 20px;
     transition: 0.25s;
+    background-color: var(--color-purple-background-light);
+    border-radius: 10px;
 }
 
 .quiz .option-container.option-chosen {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-white);
+    color: var(--color-purple-text);
 }
 
 .quiz .option-container:not(:first-child) {

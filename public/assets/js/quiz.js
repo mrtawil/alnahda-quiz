@@ -9,6 +9,8 @@ const app = new Vue({
         question_next_delay: 750, // ms
         quiz_finish_delay: 750, // ms
         fade_animation_delay: 250, // ms
+        safe_margin: 700,
+        safe_height: 0,
         question_loading: false,
         quiz_ended: false,
     },
@@ -58,6 +60,10 @@ const app = new Vue({
                     this.question_index++;
                     this.setCurrentQuestion(this.question_index);
                     this.removeNextQuestionFade();
+                    setTimeout(() => {
+                        this.updateSafeHeight();
+                    }, 1);
+
                     this.question_loading = false;
                 }, this.fade_animation_delay);
             }, this.question_next_delay);
@@ -76,8 +82,14 @@ const app = new Vue({
         removeOptionChosen: function (index) {
             document.getElementById('option-container-' + index).classList.remove('option-chosen');
         },
+        updateSafeHeight: function () {
+            this.safe_height = this.safe_margin - $('.question-container').height();
+        },
     },
     created() {
         this.setCurrentQuestion(0);
+    },
+    mounted() {
+        this.updateSafeHeight();
     },
 })
