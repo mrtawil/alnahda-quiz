@@ -8,8 +8,8 @@
         </div>
         <div class="flex-grow-1"></div>
         <div class="action-container">
-            <a class="action-button" href="{{ route('pages.quiz') }}">@lang('strings.Start')</a>
-            <div class="action-description">@lang('strings.It only take 2 minutes')</div>
+            <a class="action-button" href="{{ route('pages.quiz') }}">@lang('strings.TEST YOURSELF')</a>
+            <div class="action-description">@lang('strings.The quiz will only take a few minutes')</div>
         </div>
     </div>
 @endsection

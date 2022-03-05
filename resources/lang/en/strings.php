@@ -1,8 +1,6 @@
 <?php
 
 return [
-    "Start" => "Start",
-    "It only take 2 minutes" => "It only take 2 minutes",
     "Gift voucher" => "Gift voucher",
     "Name" => "Name",
     "Email" => "Email",
@@ -20,4 +18,6 @@ return [
     "Internation Women's Day 2022" => "Internation Women's Day 2022",
     "LET’S BREAK THE BIAS" => "LET’S\nBREAK\nTHE BIAS",
     "Are your choices biased? Test yourself & your coffee is on us!" => "Are your choices biased?\nTest yourself & your coffee\nis on us!",
+    "TEST YOURSELF" => "TEST YOURSELF",
+    "The quiz will only take a few minutes" => "The quiz will only take a few minutes",
 ];

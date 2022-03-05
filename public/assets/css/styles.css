@@ -35,6 +35,8 @@
     --font-english: 'Montserrat';
     --font-arabic: '29LT-Azer';
     --color-white: #fff;
+    --color-purple-text: #4E3079;
+    --color-purple-background-strong: #381E60;
 }
 
 #app {
@@ -89,7 +91,7 @@ html[lang='ar'] #app {
     color: var(--color-white);
     text-decoration: none;
     margin-left: auto;
-    transition: 0.05s;
+    transition: 0.1s;
 }
 
 html[lang='ar'] .header .locale {
@@ -142,15 +144,25 @@ html[lang='ar'] .welcome .title-description {
     justify-content: center;
     align-items: center;
     height: 80px;
-    width: 220px;
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
+    width: 300px;
     font-size: 32px;
+    font-weight: bold;
+    color: var(--color-purple-text);
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.welcome .action-button:focus,
+.welcome .action-button:hover {
+    color: var(--color-white);
+    background-color: var(--color-purple-background-strong);
 }
 
 .welcome .action-description {
     margin-top: 16px;
+    font-size: 14px;
 }
 
 /* Quiz Page */
