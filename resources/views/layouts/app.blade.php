@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id="app" style="background-image: url({{ $background_image ?? URL::asset('assets/media/images/background-welcome.png') }})">
+    <div id="app" style="background-image: url({{ $background_image ?? URL::asset('assets/media/images/background.png') }})">
         @include('includes.header')
         @yield('content')
     </div>

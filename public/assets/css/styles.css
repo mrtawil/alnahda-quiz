@@ -166,16 +166,46 @@ html[lang='ar'] .welcome .title-description {
 }
 
 /* Quiz Page */
+.quiz.page {
+    padding-top: 60px;
+}
+
+.quiz .question-counter-container {
+    display: flex;
+    align-items: center;
+}
+
+.quiz .question-icon {
+    width: 20px;
+}
+
 .quiz .question-counter {
-    font-size: 20px;
+    display: flex;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+html[lang='ar'] .quiz .question-counter {
+    flex-direction: row-reverse;
+}
+
+.quiz .question-counter span {
+    margin: 0 10px;
 }
 
 .quiz .question-text-container {
+    min-height: 120px;
+    margin-top: 10px;
+}
+
+html[lang='ar'] .quiz .question-text-container {
     min-height: 90px;
 }
 
 .quiz .question-text {
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
 }
 
 .quiz .question-options-container {

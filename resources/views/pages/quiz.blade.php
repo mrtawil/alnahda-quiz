@@ -3,7 +3,10 @@
 @section('content')
     <div class="quiz page">
         <div class="question-container fade-in" id="question-container" v-if="question">
-            <div class="question-counter">@{{ quiz.questions.length }}/@{{ question_index + 1 }}</div>
+            <div class="question-counter-container">
+                <img src="{{ URL::asset('assets/media/images/question-icon.png') }}" alt="" class="question-icon">
+                <div class="question-counter"><span>@{{ question_index + 1 }}</span>/<span>@{{ quiz.questions.length }}</span></div>
+            </div>
             <div class="question-text-container">
                 <div class="question-text">@{{ question['text_' + locale] }}</div>
             </div>
