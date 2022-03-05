@@ -18,5 +18,7 @@ return [
     'Screenshot the screen' => 'التقط الشاشة',
     'and show it to the barista' => 'واظهرها للباريستا',
     'Arabic' => 'عربي',
-    'English' => 'انكليزي',
+    'English' => 'EN',
+    'Internation Women\'s Day 2022' => 'اليوم العالمي للمرأة 2022',
+    'Internation Women\'s Day 2022' => 'اليوم العالمي للمرأة 2022',
 ];

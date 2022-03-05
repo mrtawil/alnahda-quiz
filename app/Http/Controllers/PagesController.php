@@ -9,6 +9,7 @@ use App\Http\Services\ResultService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\URL;
 
 class PagesController extends Controller
 {
@@ -24,7 +25,8 @@ class PagesController extends Controller
 
     public function welcome()
     {
-        return view('pages.welcome');
+        $data['background_image'] = URL::asset('assets/media/images/background-welcome.png');
+        return view('pages.welcome', $data);
     }
 
     public function quiz(QuizService $quizService)

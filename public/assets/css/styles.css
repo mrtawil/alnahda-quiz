@@ -1,44 +1,50 @@
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat/Montserrat-Black.ttf")
-         url("../fonts/Montserrat/Montserrat-BlackItalic.ttf")
-         url("../fonts/Montserrat/Montserrat-Bold.ttf")
-         url("../fonts/Montserrat/Montserrat-BoldItalic.ttf")
-         url("../fonts/Montserrat/Montserrat-ExtraBold.ttf")
-         url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf")
-         url("../fonts/Montserrat/Montserrat-ExtraLight.ttf")
-         url("../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf")
-         url("../fonts/Montserrat/Montserrat-Italic.ttf")
-         url("../fonts/Montserrat/Montserrat-Light.ttf")
-         url("../fonts/Montserrat/Montserrat-LightItalic.ttf")
-         url("../fonts/Montserrat/Montserrat-Medium.ttf")
-         url("../fonts/Montserrat/Montserrat-MediumItalic.ttf")
-         url("../fonts/Montserrat/Montserrat-MediumItalic.ttf")
-         url("../fonts/Montserrat/Montserrat-Regular.ttf")
-         url("../fonts/Montserrat/Montserrat-SemiBold.ttf")
-         url("../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf")
-         url("../fonts/Montserrat/Montserrat-Thin.ttf")
-         url("../fonts/Montserrat/Montserrat-ThinItalic.ttf");
+    font-family: '29LT-Azer';
+    src: url("../fonts/29LT-Azer/29LT-Azer-Black.otf") format("opentype");
 }
 
 @font-face {
     font-family: '29LT-Azer';
-    src: url("../fonts/29LT-Azer/29LT-Azer-Black.otf")
-         url("../fonts/29LT-Azer/29LT-Azer-Bold.otf")
-         url("../fonts/29LT-Azer/29LT-Azer-Light.otf")
-         url("../fonts/29LT-Azer/29LT-Azer-Regular.otf")
-         url("../fonts/29LT-Azer/29LT-Azer-Thin.otf");
+    font-weight: bold;
+    src: url("../fonts/29LT-Azer/29LT-Azer-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: '29LT-Azer';
+    font-weight: lighter;
+    src: url("../fonts/29LT-Azer/29LT-Azer-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: '29LT-Azer';
+    font-weight: 400;
+    src: url("../fonts/29LT-Azer/29LT-Azer-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: '29LT-Azer';
+    font-weight: 300;
+    src: url("../fonts/29LT-Azer/29LT-Azer-Thin.otf") format("opentype");
 }
 
 /* General */
+:root {
+    --color-white: #fff;
+}
+
 #app {
     width: 100%;
     max-width: 576px;
     margin: 0 auto;
-    background-color: antiquewhite;
+    color: var(--color-white);
     overflow-x: hidden;
     font-family: "Montserrat";
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
 }
 
 .page {
@@ -46,7 +52,41 @@
     flex-direction: column;
     position: relative;
     min-height: 100vh;
-    padding: 70px 30px 120px 30px;
+    padding: 70px 20px 120px 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.header .logo {
+    max-width: 75px;
+}
+
+.header .logo-separator {
+    max-height: 43px;
+    margin: 0 12.5px;
+}
+
+.header .title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.header .locale {
+    font-family: "29LT-Azer";
+    font-size: 18px;
+    color: var(--color-white);
+    text-decoration: none;
+    margin-left: auto;
+    transition: 0.05s;
+}
+
+.header .locale:hover {
+    opacity: 0.8;
 }
 
 /* Welcome Page */
@@ -81,16 +121,6 @@
 
 .welcome .action-description {
     margin-top: 16px;
-}
-
-.welcome .action-locale {
-    margin-top: 8px;
-    color: grey;
-    text-decoration: none;
-}
-
-.welcome .action-locale:hover {
-    color: rgb(99, 99, 99);
 }
 
 /* Quiz Page */
@@ -142,7 +172,7 @@
 
 /* Result Page */
 .result.page {
-    padding: 40px 30px 40px 30px;
+    padding: 40px 20px 40px 20px;
 }
 
 .result .intro-img-container {
@@ -182,7 +212,7 @@
 
 .result .form {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     border: 1px solid #000;
 }
 
@@ -196,7 +226,7 @@
 }
 
 .result .form-body {
-    padding: 30px 20px;
+    padding: 20px 20px;
     background-color: aliceblue;
 }
 
@@ -231,7 +261,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .result .form-submit {
@@ -241,7 +271,7 @@
 }
 
 .result .claim-container {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .result .claim-container .intro-img-container {
@@ -334,6 +364,11 @@ html[lang='ar'] .result .bootstrap-select a[role='option'] .text {
 html[lang='ar'] .result .option-text {
     margin-left: 0;
     margin-right: 10px;
+}
+
+html[lang='ar'] .header .locale {
+    margin-left: unset;
+    margin-right: auto;
 }
 
 /* Animations */

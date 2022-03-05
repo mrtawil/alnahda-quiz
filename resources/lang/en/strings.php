@@ -17,6 +17,8 @@ return [
     'Voucher no.' => 'Voucher no.',
     'Screenshot the screen' => 'Screenshot the screen',
     'and show it to the barista' => 'and show it to the barista',
-    'Arabic' => 'Arabic',
-    'English' => 'English',
+    'Arabic' => 'عربي',
+    'English' => 'EN',
+    'Internation Women\'s Day 2022' => 'Internation Women\'s Day 2022',
+    'LET’S BREAK THE BIAS' => 'LET’S BREAK THE BIAS',
 ];
