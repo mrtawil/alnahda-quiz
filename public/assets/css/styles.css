@@ -3,35 +3,37 @@
 
 @font-face {
     font-family: '29LT-Azer';
-    src: url("../fonts/29LT-Azer/29LT-Azer-Black.otf") format("opentype");
+    src: url('../fonts/29LT-Azer/29LT-Azer-Black.otf') format('opentype');
 }
 
 @font-face {
     font-family: '29LT-Azer';
     font-weight: bold;
-    src: url("../fonts/29LT-Azer/29LT-Azer-Bold.otf") format("opentype");
+    src: url('../fonts/29LT-Azer/29LT-Azer-Bold.otf') format('opentype');
 }
 
 @font-face {
     font-family: '29LT-Azer';
     font-weight: lighter;
-    src: url("../fonts/29LT-Azer/29LT-Azer-Light.otf") format("opentype");
+    src: url('../fonts/29LT-Azer/29LT-Azer-Light.otf') format('opentype');
 }
 
 @font-face {
     font-family: '29LT-Azer';
     font-weight: 400;
-    src: url("../fonts/29LT-Azer/29LT-Azer-Regular.otf") format("opentype");
+    src: url('../fonts/29LT-Azer/29LT-Azer-Regular.otf') format('opentype');
 }
 
 @font-face {
     font-family: '29LT-Azer';
     font-weight: 300;
-    src: url("../fonts/29LT-Azer/29LT-Azer-Thin.otf") format("opentype");
+    src: url('../fonts/29LT-Azer/29LT-Azer-Thin.otf') format('opentype');
 }
 
 /* General */
 :root {
+    --font-english: 'Montserrat';
+    --font-arabic: '29LT-Azer';
     --color-white: #fff;
 }
 
@@ -41,10 +43,15 @@
     margin: 0 auto;
     color: var(--color-white);
     overflow-x: hidden;
-    font-family: "Montserrat";
+    font-family: var(--font-english);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
+}
+
+html[lang='ar'] #app {
+    direction: rtl;
+    font-family: var(--font-arabic);
 }
 
 .page {
@@ -52,7 +59,7 @@
     flex-direction: column;
     position: relative;
     min-height: 100vh;
-    padding: 70px 20px 120px 20px;
+    padding: 130px 20px 170px 20px;
 }
 
 /* Header */
@@ -77,7 +84,7 @@
 }
 
 .header .locale {
-    font-family: "29LT-Azer";
+    font-family: var(--font-arabic);
     font-size: 18px;
     color: var(--color-white);
     text-decoration: none;
@@ -85,18 +92,41 @@
     transition: 0.05s;
 }
 
+html[lang='ar'] .header .locale {
+    margin-left: unset;
+    margin-right: auto;
+}
+
 .header .locale:hover {
     opacity: 0.8;
 }
 
 /* Welcome Page */
+html[lang='ar'] .welcome.page {
+    padding-top: 80px;
+}
+
 .welcome .title {
     font-size: 70px;
+    font-weight: bold;
+    white-space: pre-line;
+    line-height: 70px;
+}
+
+html[lang='ar'] .welcome .title {
+    font-size: 130px;
+    line-height: 130px;
 }
 
 .welcome .title-description {
     font-size: 24px;
-    margin-top: 36px;
+    font-weight: bold;
+    white-space: pre-line;
+    margin-top: 20px;
+}
+
+html[lang='ar'] .welcome .title-description {
+    font-size: 28px;
 }
 
 .welcome .action-container {
@@ -257,6 +287,11 @@
     margin-left: 10px;
 }
 
+html[lang='ar'] .result .option-text {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
 .result .form-submit-container {
     display: flex;
     justify-content: center;
@@ -348,29 +383,6 @@
     margin-top: 2px;
 }
 
-/* Arabic */
-html[lang='ar'] #app {
-    direction: rtl;
-}
-
-html[lang='ar'] .bootstrap-select .filter-option-inner {
-    text-align: right;
-}
-
-html[lang='ar'] .result .bootstrap-select a[role='option'] .text {
-    text-align: right;
-}
-
-html[lang='ar'] .result .option-text {
-    margin-left: 0;
-    margin-right: 10px;
-}
-
-html[lang='ar'] .header .locale {
-    margin-left: unset;
-    margin-right: auto;
-}
-
 /* Animations */
 .fade-in {
     animation: fadeIn 0.25s;
@@ -404,10 +416,18 @@ html[lang='ar'] .header .locale {
     border: 1px solid #000;
 }
 
+html[lang='ar'] .bootstrap-select .filter-option-inner {
+    text-align: right;
+}
+
 .bootstrap-select button.dropdown-toggle:focus {
     color: #212529 !important;
     background-color: #fff !important;
     border-color: #86b7fe !important;
     outline: 0 !important;
     box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%) !important;
+}
+
+html[lang='ar'] .result .bootstrap-select a[role='option'] .text {
+    text-align: right;
 }

@@ -3,8 +3,8 @@
 @section('content')
     <div class="welcome page">
         <div class="title-container">
-            <div class="title">@lang('strings.Are you biased?')</div>
-            <div class="title-description">@lang('strings.Participate and win')</div>
+            <div class="title">@lang('strings.LET’S BREAK THE BIAS')</div>
+            <div class="title-description">@lang("strings.Are your choices biased? Test yourself & your coffee is on us!")</div>
         </div>
         <div class="flex-grow-1"></div>
         <div class="action-container">
