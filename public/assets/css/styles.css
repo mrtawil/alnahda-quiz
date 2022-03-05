@@ -1,3 +1,36 @@
+/* Fonts */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat/Montserrat-Black.ttf")
+         url("../fonts/Montserrat/Montserrat-BlackItalic.ttf")
+         url("../fonts/Montserrat/Montserrat-Bold.ttf")
+         url("../fonts/Montserrat/Montserrat-BoldItalic.ttf")
+         url("../fonts/Montserrat/Montserrat-ExtraBold.ttf")
+         url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf")
+         url("../fonts/Montserrat/Montserrat-ExtraLight.ttf")
+         url("../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf")
+         url("../fonts/Montserrat/Montserrat-Italic.ttf")
+         url("../fonts/Montserrat/Montserrat-Light.ttf")
+         url("../fonts/Montserrat/Montserrat-LightItalic.ttf")
+         url("../fonts/Montserrat/Montserrat-Medium.ttf")
+         url("../fonts/Montserrat/Montserrat-MediumItalic.ttf")
+         url("../fonts/Montserrat/Montserrat-MediumItalic.ttf")
+         url("../fonts/Montserrat/Montserrat-Regular.ttf")
+         url("../fonts/Montserrat/Montserrat-SemiBold.ttf")
+         url("../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf")
+         url("../fonts/Montserrat/Montserrat-Thin.ttf")
+         url("../fonts/Montserrat/Montserrat-ThinItalic.ttf");
+}
+
+@font-face {
+    font-family: '29LT-Azer';
+    src: url("../fonts/29LT-Azer/29LT-Azer-Black.otf")
+         url("../fonts/29LT-Azer/29LT-Azer-Bold.otf")
+         url("../fonts/29LT-Azer/29LT-Azer-Light.otf")
+         url("../fonts/29LT-Azer/29LT-Azer-Regular.otf")
+         url("../fonts/29LT-Azer/29LT-Azer-Thin.otf");
+}
+
 /* General */
 #app {
     width: 100%;
@@ -5,6 +38,7 @@
     margin: 0 auto;
     background-color: antiquewhite;
     overflow-x: hidden;
+    font-family: "Montserrat";
 }
 
 .page {
