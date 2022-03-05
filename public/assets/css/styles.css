@@ -264,13 +264,16 @@ html[lang='ar'] .quiz .question-text-container {
 }
 
 .result .title {
-    font-size: 44px;
+    font-size: 36PX;
+    font-weight: bold;
+    line-height: 40PX;
     margin-top: 20px;
 }
 
 .result .title-description {
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 15px;
 }
 
 .result .instagram-container {
