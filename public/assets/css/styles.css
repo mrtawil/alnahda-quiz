@@ -246,7 +246,7 @@ html[lang='ar'] .quiz .question-text-container {
 
 /* Result Page */
 .result.page {
-    padding: 40px 20px 40px 20px;
+    padding-top: 0;
 }
 
 .result .intro-img-container {
@@ -275,6 +275,7 @@ html[lang='ar'] .quiz .question-text-container {
 
 .result .instagram-container {
     margin-top: 36px;
+    min-height: 650px;
 }
 
 .result .form-container {
@@ -395,7 +396,6 @@ html[lang='ar'] .result .option-text {
 }
 
 .result .footer-container {
-    margin-top: 60px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;

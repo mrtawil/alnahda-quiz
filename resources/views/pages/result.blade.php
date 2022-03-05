@@ -7,7 +7,7 @@
 @section('content')
     <div class="result page">
         <div class="intro-img-container">
-            <img class="intro-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <img class="intro-img" src="{{ URL::asset($result_message['image']) }}" alt="">
         </div>
         <div class="title-container">
             <div class="title">{{ $result_message['title_' . app()->getLocale()] }}</div>

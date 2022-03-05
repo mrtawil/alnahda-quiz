@@ -403,6 +403,7 @@ return [
             'title_en' => 'You haven\'t unleashed your potential yet',
             'description_ar' => 'لنعمل معاً لكسر التحيز وتحقيق المساواة',
             'description_en' => 'Let\'s work together to break prejudice and achieve equality',
+            'image' => 'assets/media/images/result_1.png',
         ],
         [
             'min_weight' => 9,
@@ -410,6 +411,7 @@ return [
             'title_en' => 'You can make a difference in your community',
             'description_ar' => 'لأنك على الطريق الصحيح لتحقيق المساواة بين الجنسين',
             'description_en' => 'Because you are on the right path to achieving gender equality',
+            'image' => 'assets/media/images/result_2.png',
         ],
         [
             'min_weight' => 13,
@@ -417,6 +419,7 @@ return [
             'title_en' => 'You are a change maker in your community',
             'description_ar' => 'لأنك تحترم المساواة بين الجنسين من دون أي تحيز',
             'description_en' => 'Because you respect gender equality without any bias',
+            'image' => 'assets/media/images/result_3.png',
         ],
     ],
     'coffee_shops' => [
