@@ -17,28 +17,32 @@
             <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit">
                 @csrf
                 <div class="form-header">
-                    <div class="form-title">@lang('strings.Gift voucher')</div>
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        @lang('strings.COFFEE VOUCHER')
+                    </button>
                 </div>
-                <div class="form-body">
-                    <div class="form-input-container">
-                        <label for="name" class="form-label">@lang('strings.Name') <span class="text-danger">*</span></label>
-                        <input type="text" name="name" id="name" class="form-input-text form-control" required>
-                    </div>
-                    <div class="form-input-container">
-                        <label for="email" class="form-label">@lang('strings.Email') <span class="text-danger">*</span></label>
-                        <input type="email" name="email" id="email" class="form-input-text form-control" required>
-                    </div>
-                    <div class="form-input-container">
-                        <label for="coffee_shop" class="form-label">@lang('strings.Choose your favourire coffee shop to redeem your prize') <span class="text-danger">*</span></label>
-                        <select name="coffee_shop" id="coffee_shop" class="form-control" data-size="5" required>
-                            <option value="" selected disabled>@lang('strings.Options')</option>
-                            @foreach (config('alnahda.coffee_shops') as $coffee_shop)
-                                <option value="{{ $coffee_shop['value'] }}" data-content="<img class='option-logo' src='{{ $coffee_shop['logo'] }}'><span class='option-text'>@lang($coffee_shop['title_key'])</span>"></option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="form-submit-container">
-                        <button type="submit" class="form-submit">@lang('strings.Send')</button>
+                <div id="collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <div class="form-body">
+                            <div class="form-input-container">
+                                <label for="name" class="form-label">@lang('strings.Name')<span class="text-danger">*</span></label>
+                                <input type="text" name="name" id="name" class="form-input-text form-control" required>
+                            </div>
+                            <div class="form-input-container">
+                                <label for="email" class="form-label">@lang('strings.Email')<span class="text-danger">*</span></label>
+                                <input type="email" name="email" id="email" class="form-input-text form-control" required>
+                            </div>
+                            <div class="form-input-container">
+                                <label for="coffee_shop" class="form-label">@lang('strings.Choose the café to get your voucher')<span class="text-danger">*</span></label>
+                                <div class="" v-for="(coffee_shop, index) in coffee_shops">
+                                    <img class='option-logo' :src='coffee_shop.logo'>
+                                    <span class='option-text'>@{{ coffee_shop['text_' + locale] }}</span>
+                                </div>
+                            </div>
+                            <div class="form-submit-container">
+                                <button type="submit" class="form-submit">@lang('strings.Send')</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -119,6 +123,7 @@
 
 @section('scripts')
     <script>
+        const coffee_shops = @json(config('alnahda.coffee_shops'));
         const claim_url = @json(route('pages.claim'));
     </script>
     <script async src="//www.instagram.com/embed.js"></script>

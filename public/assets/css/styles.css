@@ -35,6 +35,7 @@
     --font-english: 'Montserrat';
     --font-arabic: '29LT-Azer';
     --color-white: #fff;
+    --color-black: #000;
     --color-purple-text: #4E3079;
     --color-purple-background-light: #6F43A8;
     --color-purple-background-strong: #381E60;
@@ -264,10 +265,11 @@ html[lang='ar'] .quiz .question-text-container {
 }
 
 .result .title {
-    font-size: 36PX;
+    font-size: 32px;
     font-weight: bold;
-    line-height: 40PX;
+    line-height: 36px;
     margin-top: 20px;
+    white-space: pre-wrap;
 }
 
 .result .title-description {
@@ -294,18 +296,21 @@ html[lang='ar'] .quiz .question-text-container {
     border: 1px solid #000;
 }
 
-.result .form-header {
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
+.result .accordion-body {
+    position: relative;
+    background-color:rgba(255, 255, 255, 0.3);
+    padding: 20px;
 }
 
 .result .form-body {
-    padding: 20px 20px;
-    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result .form-input-container {
+    width: 100%;
 }
 
 .result .form-input-container:not(:first-child) {
@@ -314,6 +319,7 @@ html[lang='ar'] .quiz .question-text-container {
 
 .result .form-label {
     display: block;
+    color: var(--color-white);
 }
 
 .result .form-input-text {

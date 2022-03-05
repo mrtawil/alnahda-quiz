@@ -13,6 +13,7 @@ const app = new Vue({
         safe_height: 0,
         question_loading: false,
         quiz_ended: false,
+        coffee_shops: coffee_shops,
     },
     methods: {
         onQuizFinish: function () {

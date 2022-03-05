@@ -1,13 +1,8 @@
 <?php
 
 return [
-    "Gift voucher" => "Gift voucher",
     "Name" => "Name",
     "Email" => "Email",
-    "Choose your favourire coffee shop to redeem your prize" => "Choose your favourire coffee shop to redeem your prize",
-    "Options" => "Options",
-    "Respire Lounge, Al Rabie District" => "Respire Lounge, Al Rabie District",
-    "Huna, Panorama Mall" => "Huna, Panorama Mall",
     "Send" => "Send",
     "Free coffee!" => "Free coffee!",
     "Voucher no." => "Voucher no.",
@@ -20,4 +15,6 @@ return [
     "Are your choices biased? Test yourself & your coffee is on us!" => "Are your choices biased?\nTest yourself & your coffee\nis on us!",
     "TEST YOURSELF" => "TEST YOURSELF",
     "The quiz will only take a few minutes" => "The quiz will only take a few minutes",
+    "COFFEE VOUCHER" => "COFFEE VOUCHER",
+    "Choose the café to get your voucher" => "Choose the café to get your voucher",
 ];
