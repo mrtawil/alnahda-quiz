@@ -21,4 +21,5 @@ return [
     "Redeemable only once" => "Redeemable only once",
     "Take a screenshot and share it with the brasita" => "Take a screenshot and\nshare it with the brasita",
     "Share the test with your friends" => "Share the test with your friends",
+    "Send" => "Send",
 ];

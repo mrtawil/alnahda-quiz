@@ -427,7 +427,7 @@ return [
     ],
     'coffee_shops' => [
         [
-            'title_ar' => 'هنا، بانوراما مول - الرياض',
+            'title_ar' => "هنا، بانوراما\nمول - الرياض",
             'title_en' => "Huna, Panorama Mall\n- Riyadh",
             'short_title' => "HNA",
             'logo' => 'assets/media/images/huna-logo.png',
@@ -437,7 +437,7 @@ return [
             'value' => 'huna',
         ],
         [
-            'title_ar' => 'تنفس لاونج، حي الربيع - الرياض',
+            'title_ar' => "تنفس لاونج، حي\nالربيع - الرياض",
             'title_en' => "Respire Lounge, Ar\nRabi - Riyadh",
             'short_title' => "RSP",
             'logo' => 'assets/media/images/respire-logo.png',

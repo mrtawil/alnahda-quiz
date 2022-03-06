@@ -321,6 +321,13 @@ html[lang='ar'] .result .title-description {
     color: var(--color-white);
     background-color: var(--color-purple-background-strong);
     border-radius: 10px;
+    transition: 0.25s;
+}
+
+.result .form-header.collapsed {
+    color: var(--color-purple-text);
+    background-color: var(--color-white);
+    border-radius: 10px;
 }
 
 .result .form-header[aria-expanded='true'] {
@@ -328,10 +335,18 @@ html[lang='ar'] .result .title-description {
     border-bottom-right-radius: 0;
 }
 
+html[lang='ar'] .result .form-header {
+    font-size: 22px;
+}
+
 .result .arrow {
-    filter: invert(1);
+    filter: invert(100%) sepia(0%) saturate(16%) hue-rotate(339deg) brightness(103%) contrast(100%);
     width: 12.5px;
     margin-left: 5px;
+}
+
+.result .form-header.collapsed .arrow {
+    filter: invert(19%) sepia(64%) saturate(1269%) hue-rotate(237deg) brightness(93%) contrast(92%);
 }
 
 html[lang='ar'] .result .arrow {
@@ -366,6 +381,10 @@ html[lang='ar'] .result .arrow {
     display: block;
     font-size: 14px;
     color: var(--color-white);
+}
+
+html[lang='ar'] .result .form-label {
+    font-size: 20px;
 }
 
 .result .form-input-text {
@@ -439,6 +458,11 @@ html[lang='ar'] .result .arrow {
     white-space: pre-line;
     padding: 10px;
     transition: 0.25s;
+}
+
+html[lang='ar'] .result .option-text {
+    font-size: 24px;
+    line-height: 28px;
 }
 
 .result .option-container.chosen .option-text {
@@ -551,6 +575,10 @@ html[lang='ar'] .result .option-text {
     color: var(--color-white);
 }
 
+html[lang='ar'] .result .shareon>:not(:empty)::before {
+    left: 8px;
+}
+
 .result .share-text-container {
     cursor: pointer;
     display: flex;
@@ -567,6 +595,12 @@ html[lang='ar'] .result .option-text {
 .result .share-icon {
     width: 18px;
     margin-right: 10px;
+}
+
+html[lang='ar'] .result .share-icon {
+    margin-right: unset;
+    margin-left: 10px;
+    transform: scaleX(-1);
 }
 
 .result .share-text {
