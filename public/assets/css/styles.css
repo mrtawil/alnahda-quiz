@@ -279,10 +279,20 @@ html[lang='ar'] .quiz .question-text-container {
     white-space: pre-wrap;
 }
 
+html[lang='ar'] .result .title {
+    font-size: 54px;
+    line-height: 58px;
+}
+
 .result .title-description {
     font-size: 16px;
     line-height: 20px;
     margin-top: 15px;
+}
+
+html[lang='ar'] .result .title-description {
+    font-size: 24px;
+    line-height: 28px;
 }
 
 .result .instagram-container {
@@ -493,7 +503,7 @@ html[lang='ar'] .result .option-text {
     font-weight: bold;
     width: 100%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .result .claim-container .description-1 {
