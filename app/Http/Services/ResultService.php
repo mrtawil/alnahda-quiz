@@ -11,7 +11,7 @@ class ResultService
     protected $quiz;
     protected $quiz_id;
     protected $question_answers;
-    public $weight;
+    protected $weight;
     protected $result_message;
 
     public function __construct(Request $request)
@@ -76,5 +76,10 @@ class ResultService
     public function resultMessage()
     {
         return $this->result_message;
+    }
+
+    public function weight()
+    {
+        return $this->weight;
     }
 }

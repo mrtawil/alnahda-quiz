@@ -10,6 +10,6 @@ class Claim extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'email', 'coffee_shop', 'voucher_number'
+        'name', 'email', 'coffee_shop', 'voucher_number', 'score',
     ];
 }

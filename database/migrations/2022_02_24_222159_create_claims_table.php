@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('coffee_shop')->nullable();
             $table->unsignedInteger('voucher_number')->nullable();
+            $table->unsignedInteger('score')->nullable();
             $table->timestamps();
         });
     }

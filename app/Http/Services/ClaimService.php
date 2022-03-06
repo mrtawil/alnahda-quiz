@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\Models\Claim;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ClaimService
 {
@@ -53,6 +54,7 @@ class ClaimService
             'name' => $this->name,
             'email' => $this->email,
             'coffee_shop' => $this->coffee_shop,
+            'score' => (int) Session::get('weight'),
         ]);
 
         $voucher_number = 1;

@@ -53,11 +53,10 @@ class PagesController extends Controller
             'question_answers' => ['required', 'string'],
         ]);
 
-        $data['result_message'] = $resultService->resultMessage();
+        Session::put('weight', $resultService->weight());
+        if (app()->isProduction()) Session::put('claim_loaded', true);
 
-        if (app()->isProduction()) {
-            Session::put('claim_loaded', true);
-        }
+        $data['result_message'] = $resultService->resultMessage();
 
         return view('pages.result', $data);
     }
