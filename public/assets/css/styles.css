@@ -524,7 +524,29 @@ html[lang='ar'] .result .option-text {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 40px;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.result .shareon {
+    opacity: 0;
+}
+
+.result .shareon a:hover {
+    color: var(--color-white);
+}
+
+.result .share-text-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.result .share-text-container:focus,
+.result .share-text-container:hover {
+    opacity: 0.8;
 }
 
 .result .share-icon {
@@ -537,16 +559,11 @@ html[lang='ar'] .result .option-text {
     text-decoration: underline;
 }
 
-.result .share-text:focus,
-.result .share-text:hover {
-    opacity: 0.8;
-}
-
 .result .footer-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .result .footer-container .social-links-container {

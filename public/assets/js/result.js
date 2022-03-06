@@ -8,8 +8,18 @@ const app = new Vue({
         coffee_shops: coffee_shops,
         coffee_shop_chosen: null,
         coffee_shop_invalid: false,
+        share_on: false,
     },
     methods: {
+        toggleShare: function () {
+            if (!this.share_on) {
+                $('.shareon').fadeTo(200, 1);
+            } else {
+                $('.shareon').fadeTo(200, 0);
+            }
+
+            this.share_on = !this.share_on;
+        },
         onCoffeeShopClick: function (index) {
             this.coffee_shop_chosen = index;
             this.coffee_shop_invalid = false;

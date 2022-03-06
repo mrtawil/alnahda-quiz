@@ -2,6 +2,7 @@
 
 @section('head')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" rel="stylesheet" />
 @endsection
 
 @section('content')
@@ -73,8 +74,16 @@
             </div>
 
             <div class="share-container">
-                <img src="{{ URL::asset('assets/media/images/share-icon.png') }}" alt="" class="share-icon">
-                <div class="share-text">@lang('strings.Share the test with your friends')</div>
+                <div class="shareon">
+                    <a class="facebook" data-url="{{ route('pages.welcome') }}" data-title="Custom Facebook title" data-text="Check this out!"></a>
+                    <a class="telegram" data-url="{{ route('pages.welcome') }}" data-title="Custom Facebook title" data-text="Check this out!"></a>
+                    <a class="whatsapp" data-url="{{ route('pages.welcome') }}" data-title="Custom Facebook title" data-text="Check this out!">Send</a>
+                    <a class="twitter" data-url="{{ route('pages.welcome') }}" data-title="Custom Facebook title" data-text="Check this out!"></a>
+                </div>
+                <div class="share-text-container" v-on:click="toggleShare">
+                    <img src="{{ URL::asset('assets/media/images/share-icon.png') }}" alt="" class="share-icon">
+                    <div class="share-text">@lang('strings.Share the test with your friends')</div>
+                </div>
             </div>
 
             <div class="footer-container">
@@ -96,6 +105,7 @@
     </script>
     <script src="//www.instagram.com/embed.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" init></script>
     <script src="{{ URL::asset('assets/js/result.js') }}"></script>
     <script>
         $(function() {
