@@ -67,7 +67,7 @@
             </div>
 
             <div class="take-screenshot-container">
-                <div class="screenshot-text">@lang('strings.Take a screenshot and share it with the brasita')</div>
+                <div class="screenshot-text">@lang('strings.Take a screenshot and share it with the barista')</div>
             </div>
 
             <div class="share-container">

@@ -3,8 +3,6 @@
 return [
     "Name" => "Name",
     "Email" => "Email",
-    "Screenshot the screen" => "Screenshot the screen",
-    "and show it to the barista" => "and show it to the barista",
     "Arabic" => "عربي",
     "English" => "EN",
     "International Women's Day 2022" => "International Women's Day 2022",
@@ -19,7 +17,7 @@ return [
     "Voucher Number" => "Voucher Number",
     "Valid from March 8 - 10" => "Valid from March 8 - 10",
     "Valid for one time use only" => "Valid for one time use only",
-    "Take a screenshot and share it with the brasita" => "Take a screenshot and\nshare it with the brasita",
+    "Take a screenshot and share it with the barista" => "Take a screenshot and\nshare it with the barista",
     "Share the test with your friends" => "Share the test with your friends",
     "Send" => "Send",
 ];
