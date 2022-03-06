@@ -1,5 +1,7 @@
 <header class="header">
-    <img src="{{ URL::asset('assets/media/images/logo.png') }}" alt="" class="logo">
+    <a href="{{ route('pages.welcome') }}">
+        <img src="{{ URL::asset('assets/media/images/logo.png') }}" alt="" class="logo">
+    </a>
     <img src="{{ URL::asset('assets/media/images/logo-separator.png') }}" alt="" class="logo-separator">
     <div class="title">@lang("strings.Internation Women's Day 2022")</div>
     @if (app()->getLocale() !== 'ar')
