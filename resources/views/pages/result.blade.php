@@ -107,6 +107,7 @@
             <div class="claim-container">
                 <div class="intro-img-container">
                     <img class="intro-img" src="{{ URL::asset('assets/media/images/coffee-icon.png') }}" alt="">
+                    <img class="coffee-shop-logo" :src='assets_path + coffee_shop_info.logo_white' alt="">
                 </div>
                 <div class="title">@lang('strings.FREE COFFEE!')</div>
                 <div class="coupun">@lang('strings.Voucher Number') @{{ claim.id }}</div>
@@ -140,7 +141,7 @@
         const coffee_shops = @json(config('alnahda.coffee_shops'));
         const claim_url = @json(route('pages.claim'));
     </script>
-    <script async src="//www.instagram.com/embed.js"></script>
+    <script src="//www.instagram.com/embed.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
     <script src="{{ URL::asset('assets/js/result.js') }}"></script>
     <script>

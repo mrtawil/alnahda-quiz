@@ -1,7 +1,8 @@
 const app = new Vue({
     el: '#app',
     data: {
-        claim: { "claim": { "name": "abed", "email": "abed@gmail.com", "coffee_shop": "huna", "updated_at": "2022-03-06T02:42:28.000000Z", "created_at": "2022-03-06T02:42:28.000000Z", "id": 13 } },
+        claim: null,
+        coffee_shop_info: null,
         locale: locale,
         coffee_shops: coffee_shops,
         coffee_shop_chosen: null,
@@ -38,6 +39,7 @@ const app = new Vue({
                 data: data,
             }).done((response) => {
                 this.claim = response.claim;
+                this.coffee_shop_info = response.coffee_shop;
             }).fail(() => {
                 alert('Error occurred, please try again later.');
             });

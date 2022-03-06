@@ -65,6 +65,7 @@ class PagesController extends Controller
         ]);
 
         $data['claim'] = $claimService->claim();
+        $data['coffee_shop'] = $claimService->coffeeShop();
 
         return response()->json($data, 200);
     }

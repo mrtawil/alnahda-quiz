@@ -255,6 +255,7 @@ html[lang='ar'] .quiz .question-text-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .result .intro-img {
@@ -263,6 +264,11 @@ html[lang='ar'] .quiz .question-text-container {
     max-width: 150px;
     max-height: 150px;
     object-fit: cover;
+}
+
+.result .coffee-shop-logo {
+    margin-top: 10px;
+    max-width: 120px;
 }
 
 .result .title {

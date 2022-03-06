@@ -11,12 +11,14 @@ class ClaimService
     protected $email;
     protected $coffee_shop;
     protected $claim;
+    protected $coffee_shops;
 
     public function __construct(Request $request)
     {
         $this->name = $request->input('name');
         $this->email = $request->input('email');
         $this->coffee_shop = $request->input('coffee_shop');
+        $this->coffee_shops = collect(config('alnahda.coffee_shops'));
 
         if (!$this->name || !$this->email || !$this->coffee_shop) {
             return;
@@ -30,9 +32,19 @@ class ClaimService
         $this->claim = $claim;
     }
 
+    public function setCoffeeShop($coffee_shop)
+    {
+        $this->coffee_shop = $coffee_shop;
+    }
+
     public function claim(): Claim
     {
         return $this->claim;
+    }
+
+    public function coffeeShop()
+    {
+        return $this->coffee_shop;
     }
 
     public function store()
@@ -43,6 +55,9 @@ class ClaimService
             'coffee_shop' => $this->coffee_shop,
         ]);
 
+        $coffee_shop_info = $this->coffee_shops->where('value', $this->coffee_shop)->firstOrFail();
+
         $this->setClaim($claim);
+        $this->setCoffeeShop($coffee_shop_info);
     }
 }
