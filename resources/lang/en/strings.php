@@ -10,7 +10,7 @@ return [
     "International Women's Day 2022" => "International Women's Day 2022",
     "LET’S BREAK THE BIAS" => "LET’S\nBREAK\nTHE BIAS",
     "Are your choices biased? Test yourself & your coffee is on us!" => "Are your choices biased?\nTest yourself & your coffee\nis on us!",
-    "TEST YOURSELF" => "TEST YOURSELF",
+    "TAKE THE TEST" => "TAKE THE TEST",
     "The quiz will only take a few minutes" => "The quiz will only take a few minutes",
     "COFFEE VOUCHER" => "COFFEE VOUCHER",
     "Choose the café to get your voucher" => "Choose the café to get your voucher",
