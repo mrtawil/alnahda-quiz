@@ -481,4 +481,17 @@ return [
         'text_ar' => '!"بمناسبة اليوم العالمي للمرأة، شارك باختبار "لنكسر التحيّز',
         'text_en' => 'For International Women’s Day, take part in Alnahda’s “Break the Bias” Test!',
     ],
+    'meta' => [
+        'title_ar' => '"اختبار النهضة "لنكسر التحيّز',
+        'title_en' => 'Alnahda Break The Bias Quiz',
+        'description_ar' => 'بمناسبة اليوم العالمي للمرأة، شارك باختبار "لنكسر التحيّز" لاكتشاف ما إذا كانت اختياراتك متحيّزة أم لا',
+        'description_en' => 'For International Women\'s Day 2022, take part in Alnahda\'s #BreakTheBias quiz to discover whether your choices are gender-biased or not.',
+        'author_ar' => 'النهضة',
+        'author_en' => 'Alnahda',
+        'keyowrds_ar' => '',
+        'keyowrds_en' => '',
+        'image' => 'assets/media/images/diamond.png',
+        'url' => 'pages.welcome',
+        'type' => 'game',
+    ],
 ];
