@@ -318,10 +318,15 @@ html[lang='ar'] .quiz .question-text-container {
     border-bottom-right-radius: 0;
 }
 
-.result .form-header .arrow {
-    font-size: 26px;
+.result .arrow {
+    filter: invert(1);
+    width: 12.5px;
     margin-left: 5px;
-    margin-bottom: 3px;
+}
+
+html[lang='ar'] .result .arrow {
+    margin-left: unset;
+    margin-right: 5px;
 }
 
 .result .accordion-body {
