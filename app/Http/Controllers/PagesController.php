@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\URL;
 
 class PagesController extends Controller
 {
-    public function language(Request $request, $locale)
+    public function language(Request $request, $locale = null)
     {
         $langauges = collect(config('alnahda.languages'));
-        if ($langauges->contains($locale)) {
-            Session::put('locale', $locale);
+        if ($locale) {
+            if ($langauges->contains($locale)) {
+                Session::put('locale', $locale);
+            }
+        } else {
+            Session::put('locale', 'en');
         }
 
         return to_route('pages.welcome');

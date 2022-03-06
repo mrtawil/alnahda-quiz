@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['controller' => PagesController::class, 'as' => 'pages.'], function () {
-    Route::get('/', 'welcome')->name('welcome');
+    Route::get('/welcome', 'welcome')->name('welcome');
     Route::get('/quiz', 'quiz')->name('quiz');;
     Route::post('/result', 'result')->name('result');;
     Route::get('/result', 'result')->name('result');;
     Route::post('/claim', 'claim')->name('claim');;
-    Route::get('/{locale}', 'language')->name('language');
+    Route::get('/{locale?}', 'language')->name('language');
 });
