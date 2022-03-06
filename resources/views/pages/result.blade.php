@@ -89,9 +89,9 @@
 
             <div class="footer-container">
                 <div class="social-links-container">
-                    <a href="javascript:;"><img class="social-img" src="{{ URL::asset('assets/media/images/linkedin-icon.png') }}" alt=""></a>
-                    <a href="javascript:;"><img class="social-img" src="{{ URL::asset('assets/media/images/instagram-icon.png') }}" alt=""></a>
-                    <a href="javascript:;"><img class="social-img" src="{{ URL::asset('assets/media/images/twitter-icon.png') }}" alt=""></a>
+                    <a href="https://www.linkedin.com/company/nahda/ " target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/linkedin-icon.png') }}" alt=""></a>
+                    <a href="​​https://www.instagram.com/alnahda_ksa/   " target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/instagram-icon.png') }}" alt=""></a>
+                    <a href="https://twitter.com/alnahda_ksa" target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/twitter-icon.png') }}" alt=""></a>
                 </div>
                 <a class="social-link" href="https://alnahda.org" target="_blank">alnahda.org</a>
             </div>
