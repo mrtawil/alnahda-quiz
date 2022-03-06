@@ -87,7 +87,7 @@
         </div>
 
         <div class="instagram-container">
-            {!! $result_message['embed_link'] !!}
+            {!! collect(config('alnahda.embed_links'))->count() > 0 ? collect(config('alnahda.embed_links'))->shuffle()->values()->first() : '' !!}
         </div>
 
         <div class="footer-container">
