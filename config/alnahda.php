@@ -357,8 +357,8 @@ return [
                 ],
                 [
                     'id' => 4,
-                    'text_ar' => 'عندما تعمل الأم خارج المنزل يعاني الأطفال:',
-                    'text_en' => 'When a mother has a full time job, her children suffer:',
+                    'text_ar' => 'عندما تعمل الأم خارج المنزل يعاني الأطفال',
+                    'text_en' => 'When a mother has a full time job, her children suffer',
                     'options' => [
                         [
                             'id' => 1,
