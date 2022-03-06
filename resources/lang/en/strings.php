@@ -7,7 +7,7 @@ return [
     "and show it to the barista" => "and show it to the barista",
     "Arabic" => "عربي",
     "English" => "EN",
-    "Internation Women's Day 2022" => "Internation Women's Day 2022",
+    "International Women's Day 2022" => "International Women's Day 2022",
     "LET’S BREAK THE BIAS" => "LET’S\nBREAK\nTHE BIAS",
     "Are your choices biased? Test yourself & your coffee is on us!" => "Are your choices biased?\nTest yourself & your coffee\nis on us!",
     "TEST YOURSELF" => "TEST YOURSELF",
