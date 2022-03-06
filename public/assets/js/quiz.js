@@ -87,6 +87,7 @@ const app = new Vue({
         },
     },
     created() {
+        localStorage.removeItem('claim_loaded');
         this.setCurrentQuestion(0);
     },
     mounted() {

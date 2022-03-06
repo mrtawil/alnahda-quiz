@@ -53,6 +53,8 @@ const app = new Vue({
                 method: 'POST',
                 data: data,
             }).done((response) => {
+                localStorage.setItem('claim_loaded', true);
+
                 this.claim = response.claim;
                 this.coffee_shop_info = response.coffee_shop;
 
@@ -76,5 +78,10 @@ const app = new Vue({
                 alert('Error occurred, please try again later.');
             });
         },
+    },
+    created() {
+        if (localStorage.getItem('claim_loaded')) {
+            window.location.href = welcome_url;
+        }
     },
 })

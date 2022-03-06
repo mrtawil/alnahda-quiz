@@ -103,6 +103,7 @@
     <script>
         const coffee_shops = @json(config('alnahda.coffee_shops'));
         const claim_url = @json(route('pages.claim'));
+        const welcome_url = @json(route('pages.welcome'));
     </script>
     <script src="//www.instagram.com/embed.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>

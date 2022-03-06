@@ -43,8 +43,7 @@ class PagesController extends Controller
 
     public function result(ResultService $resultService, Request $request)
     {
-        if (!$request->input('quiz_id') || !$request->input('question_answers') || Session::get('claim_loaded')) {
-            Session::put('claim_loaded', false);
+        if (!$request->input('quiz_id') || !$request->input('question_answers')) {
             return to_route('pages.welcome');
         }
 
@@ -54,7 +53,6 @@ class PagesController extends Controller
         ]);
 
         Session::put('weight', $resultService->weight());
-        if (app()->isProduction()) Session::put('claim_loaded', true);
 
         $data['result_message'] = $resultService->resultMessage();
 
