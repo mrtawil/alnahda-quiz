@@ -12,7 +12,7 @@ return [
     "Are your choices biased? Test yourself & your coffee is on us!" => "هل اختياراتك متحيزة؟\nجاوب/ي على الأسئلة\nوالقهوة علينا!",
     "TEST YOURSELF" => "إختبر نفسك",
     "The quiz will only take a few minutes" => "يستغرق الإختبار بضع دقائق فقط",
-    "COFFEE VOUCHER" => "لقسيمة القهوة",
+    "COFFEE VOUCHER" => "قسيمة القهوة",
     "Choose the café to get your voucher" => "اختار/ي المقهى لتحصيل قهوتك",
     "GET YOUR COFFEE" => "احصل على قهوتك",
     "FREE COFFEE!" => "قهوة مجانية!",
