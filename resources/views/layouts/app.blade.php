@@ -12,6 +12,8 @@
 
     @yield('head')
     @stack('head')
+
+    @include('includes.facebook_pixel')
 </head>
 
 <body>
