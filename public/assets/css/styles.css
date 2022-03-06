@@ -51,6 +51,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
+    animation: fadeIn 0.25s;
 }
 
 html[lang='ar'] #app {
