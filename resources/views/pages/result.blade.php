@@ -111,8 +111,17 @@
         $(function() {
             $('#coffee_shop').selectpicker();
 
-            $('.option-separator').each(function() {
-                $(this).height($(this).parent().height());
+            var loaded_option_separators = false;
+            $('.form-header').on('click', function() {
+                if (loaded_option_separators) {
+                    return;
+                }
+
+                $('.option-separator').each(function() {
+                    $(this).height($(this).parent().height());
+                });
+
+                loaded_option_separators = true;
             });
         });
 
