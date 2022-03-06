@@ -74,10 +74,10 @@
 
             <div class="share-container">
                 <div class="shareon">
-                    <a class="facebook" data-url="{{ route('pages.welcome') }}" data-title="{{ config('alnahda.shareon.title_' . app()->getLocale()) }}" data-text="{{ config('alnahda.shareon.text_' . app()->getLocale()) }}"></a>
-                    <a class="telegram" data-url="{{ route('pages.welcome') }}" data-title="{{ config('alnahda.shareon.title_' . app()->getLocale()) }}" data-text="{{ config('alnahda.shareon.text_' . app()->getLocale()) }}"></a>
-                    <a class="whatsapp" data-url="{{ route('pages.welcome') }}" data-title="{{ config('alnahda.shareon.title_' . app()->getLocale()) }}" data-text="{{ config('alnahda.shareon.text_' . app()->getLocale()) }}">@lang('strings.Send')</a>
-                    <a class="twitter" data-url="{{ route('pages.welcome') }}" data-title="{{ config('alnahda.shareon.title_' . app()->getLocale()) }}" data-text="{{ config('alnahda.shareon.text_' . app()->getLocale()) }}"></a>
+                    <a class="facebook" data-url="{{ route('pages.welcome') }}" data-text="{{ config('alnahda.shareon.text_' . app()->getLocale()) }}"></a>
+                    <a class="telegram" data-url="{{ route('pages.welcome') }}" data-text="{{ config('alnahda.shareon.text_' . app()->getLocale()) }}"></a>
+                    <a class="whatsapp" data-url="{{ route('pages.welcome') }}" data-text="{{ config('alnahda.shareon.text_' . app()->getLocale()) }}">@lang('strings.Send')</a>
+                    <a class="twitter" data-url="{{ route('pages.welcome') }}" data-text="{{ config('alnahda.shareon.text_' . app()->getLocale()) }}"></a>
                 </div>
                 <div class="share-text-container" v-on:click="toggleShare">
                     <img src="{{ URL::asset('assets/media/images/share-icon.png') }}" alt="" class="share-icon">
