@@ -140,7 +140,7 @@ return [
             'questions' => [
                 [
                     'id' => 1,
-                    'text_ar' => 'هل عملت مع أو قابلت مطور/ة تطبيقات وبرامج تقنية من قبل؟',
+                    'text_ar' => 'هل عملت مع أو قابلت مطورة تطبيقات وبرامج تقنية من قبل؟',
                     'text_en' => 'Have you worked with or met a female web developer before?',
                     'options' => [
                         [
