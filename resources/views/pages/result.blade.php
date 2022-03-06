@@ -65,6 +65,7 @@
                 <div class="coupun">@lang('strings.Voucher Number') @{{ voucher_number }}</div>
                 <div class="description-1">@lang('strings.Valid from March 8 - 10')</div>
                 <div class="description-2">@lang('strings.Valid for one time use only')</div>
+                <div class="description-2" v-if="coffee_shop_info['extra_description_' + locale]">@{{ coffee_shop_info["extra_description_" + locale] }}</div>
             </div>
 
             <div class="take-screenshot-container">

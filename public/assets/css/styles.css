@@ -555,6 +555,7 @@ html[lang='ar'] .result .option-text {
     font-size: 14px;
     width: 100%;
     text-align: center;
+    white-space: pre-line;
 }
 
 .result .take-screenshot-container {
