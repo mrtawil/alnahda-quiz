@@ -30,6 +30,10 @@ const app = new Vue({
                 return;
             }
 
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email)) {
+                return;
+            }
+
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('form input[name="_token"]').val(),
