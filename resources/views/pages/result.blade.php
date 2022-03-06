@@ -36,7 +36,7 @@
                                 <label for="coffee_shop" class="form-label">@lang('strings.Choose the café to get your voucher')<span class="text-danger">*</span></label>
                                 <div class="" v-for="(coffee_shop, index) in coffee_shops">
                                     <img class='option-logo' :src='coffee_shop.logo'>
-                                    <span class='option-text'>@{{ coffee_shop['text_' + locale] }}</span>
+                                    <span class='option-text'>@{{ coffee_shop['title_' + locale] }}</span>
                                 </div>
                             </div>
                             <div class="form-submit-container">

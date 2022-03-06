@@ -2,6 +2,8 @@ const app = new Vue({
     el: '#app',
     data: {
         claim: null,
+        locale: locale,
+        coffee_shops: coffee_shops,
     },
     methods: {
         onFormSubmit: function () {
