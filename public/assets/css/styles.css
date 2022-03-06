@@ -293,13 +293,32 @@ html[lang='ar'] .quiz .question-text-container {
 .result .form {
     width: 100%;
     margin-top: 20px;
-    border: 1px solid #000;
+}
+
+.result .form-header {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--color-white);
+    background-color: var(--color-purple-background-strong);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.result .form-header .arrow {
+    font-size: 26px;
+    margin-left: 5px;
+    margin-bottom: 3px;
 }
 
 .result .accordion-body {
     position: relative;
     background-color:rgba(255, 255, 255, 0.3);
     padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .result .form-body {
@@ -319,26 +338,85 @@ html[lang='ar'] .quiz .question-text-container {
 
 .result .form-label {
     display: block;
+    font-size: 14px;
     color: var(--color-white);
 }
 
 .result .form-input-text {
     width: 100%;
-    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.result .form-input-text:focus,
+.result .form-input-text:hover {
+    box-shadow: none !important;
+    border-color: var(--color-purple-background-light) !important;
 }
 
 .result .bootstrap-select a[role='option'] .text {
     width: 100%;
 }
 
-.result .option-logo {
-    width: 20px;
-    height: 20px;
+.result .option-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    margin-top: 10px;
     border-radius: 10px;
+    transition: 0.25s;
+    border: 1px solid transparent;
+}
+
+.result .option-container:first-child {
+    margin-top: unset;
+}
+
+.result .option-container.invalid {
+    border: 1px solid rgb(220, 53, 69);
+}
+
+.result .option-container.chosen {
+    color: var(--color-white);
+    background-color: var(--color-purple-background-strong);
+}
+
+.result .option-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.result .option-logo {
+    width: 70px;
+    margin: 5px 10px;
+}
+
+.result .option-logo.invert {
+    filter: invert(100%);
+}
+
+.result .option-separator {
+    width: 1px;
+    background-color: var(--color-black);
+    transition: 0.25s;
+}
+
+.result .option-container.chosen .option-separator {
+    background-color: var(--color-white);
 }
 
 .result .option-text {
-    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-black);
+    white-space: pre-line;
+    padding: 10px;
+    transition: 0.25s;
+}
+
+.result .option-container.chosen .option-text {
+    color: var(--color-white);
 }
 
 html[lang='ar'] .result .option-text {
@@ -347,16 +425,28 @@ html[lang='ar'] .result .option-text {
 }
 
 .result .form-submit-container {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 35px;
 }
 
 .result .form-submit {
-    padding: 8px 40px;
-    background-color: #000;
-    color: #fff;
+    height: 62px;
+    width: 100%;
+    font-weight: bold;
+    color: var(--color-purple-text);
+    background-color: var(--color-white);
+    border: unset;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.result .form-submit:focus,
+.result .form-submit:hover {
+    color: var(--color-white);
+    background-color: var(--color-purple-background-strong);
 }
 
 .result .claim-container {

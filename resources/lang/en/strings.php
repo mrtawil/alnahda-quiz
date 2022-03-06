@@ -3,7 +3,6 @@
 return [
     "Name" => "Name",
     "Email" => "Email",
-    "Send" => "Send",
     "Free coffee!" => "Free coffee!",
     "Voucher no." => "Voucher no.",
     "Screenshot the screen" => "Screenshot the screen",
@@ -17,4 +16,5 @@ return [
     "The quiz will only take a few minutes" => "The quiz will only take a few minutes",
     "COFFEE VOUCHER" => "COFFEE VOUCHER",
     "Choose the café to get your voucher" => "Choose the café to get your voucher",
+    "GET YOUR COFFEE" => "GET YOUR COFFEE",
 ];

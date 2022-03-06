@@ -424,16 +424,20 @@ return [
     ],
     'coffee_shops' => [
         [
-            'title_ar' => 'تنفس لاونج، حي الربيع - الرياض',
-            'title_en' => 'Respire Lounge, Al Rabie District',
-            'logo' => 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            'value' => 'respire_lounge',
+            'title_ar' => 'هنا، بانوراما مول - الرياض',
+            'title_en' => "Huna, Panorama Mall\n- Riyadh",
+            'logo' => 'assets/media/images/huna-logo.png',
+            'logo_class' => 'invert',
+            'logo_class_selected' => '',
+            'value' => 'huna',
         ],
         [
-            'title_ar' => 'هنا، بانوراما مول - الرياض',
-            'title_en' => 'Huna, Panorama Mall',
-            'logo' => 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            'value' => 'huna',
+            'title_ar' => 'تنفس لاونج، حي الربيع - الرياض',
+            'title_en' => "Respire Lounge, Ar\nRabi - Riyadh",
+            'logo' => 'assets/media/images/respire-logo.png',
+            'logo_class' => '',
+            'logo_class_selected' => 'invert',
+            'value' => 'respire',
         ],
     ],
 ];

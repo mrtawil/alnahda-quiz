@@ -17,4 +17,5 @@ return [
     "The quiz will only take a few minutes" => "يستغرق الإختبار بضع دقائق فقط",
     "COFFEE VOUCHER" => "لقسيمة القهوة",
     "Choose the café to get your voucher" => "اختار/ي المقهى لتحصيل قهوتك",
+    "GET YOUR COFFEE" => "احصل على قهوتك",
 ];

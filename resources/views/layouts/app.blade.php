@@ -25,6 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script>
         const locale = @json(app()->getLocale());
+        const assets_path = @json(URL::asset(''));
     </script>
 
     @yield('scripts')

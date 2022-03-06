@@ -4,15 +4,27 @@ const app = new Vue({
         claim: null,
         locale: locale,
         coffee_shops: coffee_shops,
+        coffee_shop_chosen: null,
+        coffee_shop_invalid: false,
     },
     methods: {
+        onCoffeeShopClick: function (index) {
+            this.coffee_shop_chosen = index;
+            this.coffee_shop_invalid = false;
+        },
         onFormSubmit: function () {
             var data = $('form').serializeArray().reduce(function (obj, item) {
                 obj[item.name] = item.value;
                 return obj;
             }, {});
 
-            if (!data.name || !data.email || !data.coffee_shop) {
+            data.coffee_shop = this.coffee_shop_chosen !== null ? this.coffee_shops[this.coffee_shop_chosen].value : null;
+
+            if (data.coffee_shop === null) {
+                this.coffee_shop_invalid = true;
+            }
+
+            if (!data.name || !data.email || data.coffee_shop === null) {
                 return;
             }
 

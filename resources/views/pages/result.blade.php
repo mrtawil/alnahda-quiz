@@ -16,10 +16,8 @@
         <div class="form-container" v-if="!claim">
             <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit">
                 @csrf
-                <div class="form-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        @lang('strings.COFFEE VOUCHER')
-                    </button>
+                <div class="form-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    @lang('strings.COFFEE VOUCHER') <span class="arrow">↓</span>
                 </div>
                 <div id="collapseOne" class="accordion-collapse collapse show">
                     <div class="accordion-body">
@@ -34,13 +32,16 @@
                             </div>
                             <div class="form-input-container">
                                 <label for="coffee_shop" class="form-label">@lang('strings.Choose the café to get your voucher')<span class="text-danger">*</span></label>
-                                <div class="" v-for="(coffee_shop, index) in coffee_shops">
-                                    <img class='option-logo' :src='coffee_shop.logo'>
-                                    <span class='option-text'>@{{ coffee_shop['title_' + locale] }}</span>
+                                <div class="option-container" v-for="(coffee_shop, index) in coffee_shops" v-on:click="onCoffeeShopClick(index)" :class="{'chosen': index == coffee_shop_chosen, 'invalid': coffee_shop_invalid}">
+                                    <div class="option-logo-container">
+                                        <img class="option-logo" :src='assets_path + coffee_shop.logo' :class="index == coffee_shop_chosen ? coffee_shop.logo_class_selected : coffee_shop.logo_class">
+                                    </div>
+                                    <div class="option-separator"></div>
+                                    <span class="option-text">@{{ coffee_shop["title_" + locale] }}</span>
                                 </div>
                             </div>
                             <div class="form-submit-container">
-                                <button type="submit" class="form-submit">@lang('strings.Send')</button>
+                                <button type="submit" class="form-submit">@lang('strings.GET YOUR COFFEE')</button>
                             </div>
                         </div>
                     </div>
@@ -132,6 +133,10 @@
     <script>
         $(function() {
             $('#coffee_shop').selectpicker();
+
+            $('.option-separator').each(function() {
+                $(this).height($(this).parent().height());
+            });
         });
 
         (function() {
