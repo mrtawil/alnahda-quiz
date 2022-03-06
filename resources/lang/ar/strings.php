@@ -17,6 +17,7 @@ return [
     "GET YOUR COFFEE" => "احصل على قهوتك",
     "FREE COFFEE!" => "قهوة مجانية!",
     "Voucher Number" => "رقم القسيمة",
+    "Valid from March 7 - 17" => "القسيمة صالحة ما بين 7 - 17 مارس",
     "Redeemable only once" => "يمكن إستخدام القسيمة مرّة واحدة فقط",
     "Take a screenshot and share it with the brasita" => "التقط الشاشة و شاركها مع الباريستا",
     "Share the test with your friends" => "شارك الإختبار مع أصدقائك",
