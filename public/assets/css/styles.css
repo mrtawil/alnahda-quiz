@@ -310,8 +310,12 @@ html[lang='ar'] .quiz .question-text-container {
     font-weight: bold;
     color: var(--color-white);
     background-color: var(--color-purple-background-strong);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
+}
+
+.result .form-header[aria-expanded='true'] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .result .form-header .arrow {

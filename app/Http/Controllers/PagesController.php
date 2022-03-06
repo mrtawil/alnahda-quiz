@@ -51,7 +51,9 @@ class PagesController extends Controller
 
         $data['result_message'] = $resultService->resultMessage();
 
-        // Session::put('claim_loaded', true);
+        if (app()->isProduction()) {
+            Session::put('claim_loaded', true);
+        }
 
         return view('pages.result', $data);
     }

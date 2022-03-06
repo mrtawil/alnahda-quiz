@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('coffee_shop')->nullable();
+            $table->unsignedInteger('voucher_number')->nullable();
             $table->timestamps();
         });
     }

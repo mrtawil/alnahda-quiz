@@ -55,6 +55,15 @@ class ClaimService
             'coffee_shop' => $this->coffee_shop,
         ]);
 
+        $voucher_number = 1;
+        $claim_latest = Claim::where('coffee_shop', $this->coffee_shop)->whereNotNull('voucher_number')->latest()->first();
+        if ($claim_latest) {
+            $voucher_number = $claim_latest->voucher_number + 1;
+        }
+
+        $claim->voucher_number = $voucher_number;
+        $claim->save();
+
         $coffee_shop_info = $this->coffee_shops->where('value', $this->coffee_shop)->firstOrFail();
 
         $this->setClaim($claim);

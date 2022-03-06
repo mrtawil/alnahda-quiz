@@ -18,10 +18,10 @@
             <div class="form-container">
                 <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit">
                     @csrf
-                    <div class="form-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="form-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         @lang('strings.COFFEE VOUCHER') <span class="arrow">↓</span>
                     </div>
-                    <div id="collapseOne" class="accordion-collapse collapse show">
+                    <div id="collapseOne" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <div class="form-body">
                                 <div class="form-input-container">
@@ -110,7 +110,7 @@
                     <img class="coffee-shop-logo" :src='assets_path + coffee_shop_info.logo_white' alt="">
                 </div>
                 <div class="title">@lang('strings.FREE COFFEE!')</div>
-                <div class="coupun">@lang('strings.Voucher Number') @{{ claim.id }}</div>
+                <div class="coupun">@lang('strings.Voucher Number') @{{ claim.voucher_number }}</div>
                 <div class="description-1">@lang('strings.Valid from March 7 - 17')</div>
                 <div class="description-2">@lang('strings.Redeemable only once')</div>
             </div>
