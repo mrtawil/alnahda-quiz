@@ -9,7 +9,7 @@ const app = new Vue({
         question_next_delay: 750, // ms
         quiz_finish_delay: 750, // ms
         fade_animation_delay: 250, // ms
-        safe_margin: 700,
+        safe_margin: 800,
         safe_height: 0,
         question_loading: false,
         quiz_ended: false,
