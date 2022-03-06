@@ -16,7 +16,7 @@
             </div>
 
             <div class="form-container">
-                <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit">
+                <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit" id="form">
                     @csrf
                     <div class="form-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         @lang('strings.COFFEE VOUCHER') <span class="arrow">↓</span>

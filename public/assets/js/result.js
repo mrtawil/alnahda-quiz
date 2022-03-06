@@ -30,7 +30,7 @@ const app = new Vue({
                 return;
             }
 
-            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email)) {
+            if (!document.getElementById('form').checkValidity()) {
                 return;
             }
 
