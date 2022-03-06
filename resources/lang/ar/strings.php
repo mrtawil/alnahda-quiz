@@ -10,6 +10,7 @@ return [
     "Are your choices biased? Test yourself & your coffee is on us!" => "هل اختياراتك متحيزة؟\nجاوب/ي على الأسئلة\nوالقهوة علينا!",
     "TAKE THE TEST" => "إختبر نفسك",
     "The quiz will only take a few minutes" => "يستغرق الإختبار بضع دقائق فقط",
+    "Imagine a world free of bias" => "تخيّل عالماً متوازناً خالٍ من التحيّز والتميّز, عالم منصف ومتنوع وشامل. من أجل تحقيق هذا الهدف، نحن بحاجة لإعادة النظر في تصرفاتنا والقرارات التي نتخذها بشكل يومي.",
     "COFFEE VOUCHER" => "قسيمة القهوة",
     "Choose the café to get your voucher" => "اختار/ي المقهى لتحصيل قهوتك",
     "GET YOUR COFFEE" => "احصل على قهوتك",

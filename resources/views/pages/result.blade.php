@@ -14,6 +14,7 @@
             <div class="title-container">
                 <div class="title">{{ $result_message['title_' . app()->getLocale()] }}</div>
                 <div class="title-description">{{ $result_message['description_' . app()->getLocale()] }}</div>
+                <div class="title-description">@lang('strings.Imagine a world free of bias')</div>
             </div>
 
             <div class="form-container">
