@@ -3,8 +3,6 @@
 return [
     "Name" => "Name",
     "Email" => "Email",
-    "Free coffee!" => "Free coffee!",
-    "Voucher no." => "Voucher no.",
     "Screenshot the screen" => "Screenshot the screen",
     "and show it to the barista" => "and show it to the barista",
     "Arabic" => "عربي",
@@ -17,4 +15,10 @@ return [
     "COFFEE VOUCHER" => "COFFEE VOUCHER",
     "Choose the café to get your voucher" => "Choose the café to get your voucher",
     "GET YOUR COFFEE" => "GET YOUR COFFEE",
+    "FREE COFFEE!" => "FREE COFFEE!",
+    "Voucher Number" => "Voucher Number",
+    "Valid from March 7 - 17" => "Valid from March 7 - 17",
+    "Redeemable only once" => "Redeemable only once",
+    "Take a screenshot and share it with the brasita" => "Take a screenshot and\nshare it with the brasita",
+    "Share the test with your friends" => "Share the test with your friends",
 ];

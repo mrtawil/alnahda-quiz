@@ -3,9 +3,6 @@
 return [
     "Name" => "الاسم",
     "Email" => "البريد الإلكتروني",
-    "Send" => "أرسل",
-    "Free coffee!" => "قهوة مجانية",
-    "Voucher no." => "قسيمة رقم",
     "Screenshot the screen" => "التقط الشاشة",
     "and show it to the barista" => "واظهرها للباريستا",
     "Arabic" => "عربي",
@@ -18,4 +15,9 @@ return [
     "COFFEE VOUCHER" => "لقسيمة القهوة",
     "Choose the café to get your voucher" => "اختار/ي المقهى لتحصيل قهوتك",
     "GET YOUR COFFEE" => "احصل على قهوتك",
+    "FREE COFFEE!" => "قهوة مجانية!",
+    "Voucher Number" => "رقم القسيمة",
+    "Redeemable only once" => "يمكن إستخدام القسيمة مرّة واحدة فقط",
+    "Take a screenshot and share it with the brasita" => "التقط الشاشة و شاركها مع الباريستا",
+    "Share the test with your friends" => "شارك الإختبار مع أصدقائك",
 ];

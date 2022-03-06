@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        claim: null,
+        claim: { "claim": { "name": "abed", "email": "abed@gmail.com", "coffee_shop": "huna", "updated_at": "2022-03-06T02:42:28.000000Z", "created_at": "2022-03-06T02:42:28.000000Z", "id": 13 } },
         locale: locale,
         coffee_shops: coffee_shops,
         coffee_shop_chosen: null,

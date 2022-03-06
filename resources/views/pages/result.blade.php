@@ -6,47 +6,50 @@
 
 @section('content')
     <div class="result page">
-        <div class="intro-img-container">
-            <img class="intro-img" src="{{ URL::asset($result_message['image']) }}" alt="">
-        </div>
-        <div class="title-container">
-            <div class="title">{{ $result_message['title_' . app()->getLocale()] }}</div>
-            <div class="title-description">{{ $result_message['description_' . app()->getLocale()] }}</div>
-        </div>
-        <div class="form-container" v-if="!claim">
-            <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit">
-                @csrf
-                <div class="form-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    @lang('strings.COFFEE VOUCHER') <span class="arrow">↓</span>
-                </div>
-                <div id="collapseOne" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                        <div class="form-body">
-                            <div class="form-input-container">
-                                <label for="name" class="form-label">@lang('strings.Name')<span class="text-danger">*</span></label>
-                                <input type="text" name="name" id="name" class="form-input-text form-control" required>
-                            </div>
-                            <div class="form-input-container">
-                                <label for="email" class="form-label">@lang('strings.Email')<span class="text-danger">*</span></label>
-                                <input type="email" name="email" id="email" class="form-input-text form-control" required>
-                            </div>
-                            <div class="form-input-container">
-                                <label for="coffee_shop" class="form-label">@lang('strings.Choose the café to get your voucher')<span class="text-danger">*</span></label>
-                                <div class="option-container" v-for="(coffee_shop, index) in coffee_shops" v-on:click="onCoffeeShopClick(index)" :class="{'chosen': index == coffee_shop_chosen, 'invalid': coffee_shop_invalid}">
-                                    <div class="option-logo-container">
-                                        <img class="option-logo" :src='assets_path + coffee_shop.logo' :class="index == coffee_shop_chosen ? coffee_shop.logo_class_selected : coffee_shop.logo_class">
-                                    </div>
-                                    <div class="option-separator"></div>
-                                    <span class="option-text">@{{ coffee_shop["title_" + locale] }}</span>
+        <div class="result-message" v-if="!claim">
+            <div class="intro-img-container">
+                <img class="intro-img" src="{{ URL::asset($result_message['image']) }}" alt="">
+            </div>
+            <div class="title-container">
+                <div class="title">{{ $result_message['title_' . app()->getLocale()] }}</div>
+                <div class="title-description">{{ $result_message['description_' . app()->getLocale()] }}</div>
+            </div>
+
+            <div class="form-container">
+                <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit">
+                    @csrf
+                    <div class="form-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        @lang('strings.COFFEE VOUCHER') <span class="arrow">↓</span>
+                    </div>
+                    <div id="collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <div class="form-body">
+                                <div class="form-input-container">
+                                    <label for="name" class="form-label">@lang('strings.Name')<span class="text-danger">*</span></label>
+                                    <input type="text" name="name" id="name" class="form-input-text form-control" required>
                                 </div>
-                            </div>
-                            <div class="form-submit-container">
-                                <button type="submit" class="form-submit">@lang('strings.GET YOUR COFFEE')</button>
+                                <div class="form-input-container">
+                                    <label for="email" class="form-label">@lang('strings.Email')<span class="text-danger">*</span></label>
+                                    <input type="email" name="email" id="email" class="form-input-text form-control" required>
+                                </div>
+                                <div class="form-input-container">
+                                    <label for="coffee_shop" class="form-label">@lang('strings.Choose the café to get your voucher')<span class="text-danger">*</span></label>
+                                    <div class="option-container" v-for="(coffee_shop, index) in coffee_shops" v-on:click="onCoffeeShopClick(index)" :class="{'chosen': index == coffee_shop_chosen, 'invalid': coffee_shop_invalid}">
+                                        <div class="option-logo-container">
+                                            <img class="option-logo" :src='assets_path + coffee_shop.logo' :class="index == coffee_shop_chosen ? coffee_shop.logo_class_selected : coffee_shop.logo_class">
+                                        </div>
+                                        <div class="option-separator"></div>
+                                        <span class="option-text">@{{ coffee_shop["title_" + locale] }}</span>
+                                    </div>
+                                </div>
+                                <div class="form-submit-container">
+                                    <button type="submit" class="form-submit">@lang('strings.GET YOUR COFFEE')</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
 
             <div class="instagram-container">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CZ19PX5q4HC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
@@ -103,25 +106,30 @@
         <div class="claim fade-in" v-else>
             <div class="claim-container">
                 <div class="intro-img-container">
-                    <img class="intro-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <img class="intro-img" src="{{ URL::asset('assets/media/images/coffee-icon.png') }}" alt="">
                 </div>
-                <div class="title">@lang('strings.Free coffee!')</div>
-                <div class="coupun">@lang('strings.Voucher no.') @{{ claim.id }}</div>
-                <div class="description-1">@lang('strings.Screenshot the screen')</div>
-                <div class="description-2">@lang('strings.and show it to the barista')</div>
+                <div class="title">@lang('strings.FREE COFFEE!')</div>
+                <div class="coupun">@lang('strings.Voucher Number') @{{ claim.id }}</div>
+                <div class="description-1">@lang('strings.Valid from March 7 - 17')</div>
+                <div class="description-2">@lang('strings.Redeemable only once')</div>
+            </div>
+
+            <div class="take-screenshot-container">
+                <div class="screenshot-text">@lang('strings.Take a screenshot and share it with the brasita')</div>
+            </div>
+
+            <div class="share-container">
+                <img src="{{ URL::asset('assets/media/images/share-icon.png') }}" alt="" class="share-icon">
+                <div class="share-text">@lang('strings.Share the test with your friends')</div>
             </div>
 
             <div class="footer-container">
-                <img class="logo-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                <div class="social-media-container">
-                    <div class="social-links-container">
-                        <img class="social-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                        <img class="social-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                        <img class="social-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                    </div>
-                    <a class="social-link" href="https://alnahda.org">alnahda.org</a>
+                <div class="social-links-container">
+                    <a href="javascript:;"><img class="social-img" src="{{ URL::asset('assets/media/images/linkedin-icon.png') }}" alt=""></a>
+                    <a href="javascript:;"><img class="social-img" src="{{ URL::asset('assets/media/images/instagram-icon.png') }}" alt=""></a>
+                    <a href="javascript:;"><img class="social-img" src="{{ URL::asset('assets/media/images/twitter-icon.png') }}" alt=""></a>
                 </div>
-                <img class="logo-img" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <a class="social-link" href="https://alnahda.org" target="_blank">alnahda.org</a>
             </div>
         </div>
     </div>
