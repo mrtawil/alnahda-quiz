@@ -74,6 +74,8 @@ const app = new Vue({
 
                     this.voucher_number = output;
                 }
+
+                $('html, body').animate({ scrollTop: 0 }, 'fast');
             }).fail(() => {
                 alert('Error occurred, please try again later.');
             });

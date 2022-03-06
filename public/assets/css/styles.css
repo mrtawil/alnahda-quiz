@@ -299,7 +299,7 @@ html[lang='ar'] .result .title-description {
 
 .result .instagram-container {
     margin-top: 36px;
-    min-height: 650px;
+    min-height: 625px;
 }
 
 .result .form-container {
@@ -614,7 +614,6 @@ html[lang='ar'] .result .share-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
 }
 
 .result .footer-container .social-links-container {

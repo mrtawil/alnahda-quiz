@@ -433,7 +433,7 @@ return [
         [
             'min_weight' => 9,
             'title_ar' => 'أنت قادر/ة على إحداث فرق في مجتمعك!',
-            'title_en' => "YOU ARE ABLE TO MAKE A DIFFER-\nENCE IN YOUR COMMUNITY!",
+            'title_en' => "YOU ARE ABLE TO MAKE A DIFFERENCE IN YOUR COMMUNITY!",
             'description_ar' => 'لأنك على الطريق الصحيح لتحقيق المساواة بين الجنسينن',
             'description_en' => 'Because you are on the right track to achieving gender equality',
             'image' => 'assets/media/images/result_2.png',

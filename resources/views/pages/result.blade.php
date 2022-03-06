@@ -52,10 +52,6 @@
                     </div>
                 </form>
             </div>
-
-            <div class="instagram-container">
-                {!! $result_message['embed_link'] !!}
-            </div>
         </div>
 
         <div class="claim fade-in" v-else>
@@ -66,8 +62,8 @@
                 </div>
                 <div class="title">@lang('strings.FREE COFFEE!')</div>
                 <div class="coupun">@lang('strings.Voucher Number') @{{ voucher_number }}</div>
-                <div class="description-1">@lang('strings.Valid from March 7 - 17')</div>
-                <div class="description-2">@lang('strings.Redeemable only once')</div>
+                <div class="description-1">@lang('strings.Valid from March 8 - 10')</div>
+                <div class="description-2">@lang('strings.Valid for one time use only')</div>
             </div>
 
             <div class="take-screenshot-container">
@@ -86,15 +82,19 @@
                     <div class="share-text">@lang('strings.Share the test with your friends')</div>
                 </div>
             </div>
+        </div>
 
-            <div class="footer-container">
-                <div class="social-links-container">
-                    <a href="https://www.linkedin.com/company/nahda/ " target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/linkedin-icon.png') }}" alt=""></a>
-                    <a href="​​https://www.instagram.com/alnahda_ksa/   " target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/instagram-icon.png') }}" alt=""></a>
-                    <a href="https://twitter.com/alnahda_ksa" target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/twitter-icon.png') }}" alt=""></a>
-                </div>
-                <a class="social-link" href="https://alnahda.org" target="_blank">alnahda.org</a>
+        <div class="instagram-container">
+            {!! $result_message['embed_link'] !!}
+        </div>
+
+        <div class="footer-container">
+            <div class="social-links-container">
+                <a href="https://www.linkedin.com/company/nahda/ " target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/linkedin-icon.png') }}" alt=""></a>
+                <a href="​​https://www.instagram.com/alnahda_ksa/   " target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/instagram-icon.png') }}" alt=""></a>
+                <a href="https://twitter.com/alnahda_ksa" target="_blank"><img class="social-img" src="{{ URL::asset('assets/media/images/twitter-icon.png') }}" alt=""></a>
             </div>
+            <a class="social-link" href="https://alnahda.org" target="_blank">alnahda.org</a>
         </div>
     </div>
 @endsection
