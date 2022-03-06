@@ -248,6 +248,7 @@ html[lang='ar'] .quiz .question-text-container {
 /* Result Page */
 .result.page {
     padding-top: 0;
+    padding-bottom: 20px;
 }
 
 .result .intro-img-container {
