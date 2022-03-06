@@ -110,7 +110,7 @@
                     <img class="coffee-shop-logo" :src='assets_path + coffee_shop_info.logo_white' alt="">
                 </div>
                 <div class="title">@lang('strings.FREE COFFEE!')</div>
-                <div class="coupun">@lang('strings.Voucher Number') @{{ claim.voucher_number }}</div>
+                <div class="coupun">@lang('strings.Voucher Number') @{{ voucher_number }}</div>
                 <div class="description-1">@lang('strings.Valid from March 7 - 17')</div>
                 <div class="description-2">@lang('strings.Redeemable only once')</div>
             </div>

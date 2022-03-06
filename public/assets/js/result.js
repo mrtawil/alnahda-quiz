@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         claim: null,
         coffee_shop_info: null,
+        voucher_number: null,
         locale: locale,
         coffee_shops: coffee_shops,
         coffee_shop_chosen: null,
@@ -40,6 +41,23 @@ const app = new Vue({
             }).done((response) => {
                 this.claim = response.claim;
                 this.coffee_shop_info = response.coffee_shop;
+
+                if (this.claim && this.coffee_shop_info) {
+                    let zeros = 4;
+                    let numbers_length = this.claim.voucher_number.toString().length;
+                    let zeroes_needed_length = zeros - numbers_length;
+                    let output = this.coffee_shop_info.short_title + "-";
+
+                    if (zeroes_needed_length > 0) {
+                        for (let i = 0; i < zeroes_needed_length; i++) {
+                            output += "0";
+                        }
+                    }
+
+                    output += this.claim.voucher_number;
+
+                    this.voucher_number = output;
+                }
             }).fail(() => {
                 alert('Error occurred, please try again later.');
             });
