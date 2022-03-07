@@ -484,7 +484,7 @@ return [
     'meta' => [
         'title_ar' => 'اختبار النهضة "لنكسر التحيّز"',
         'title_en' => 'Alnahda Break The Bias Quiz',
-        'description_ar' => 'بمناسبة اليوم العالمي للمرأة، شارك باختبار "لنكسر التحيّز" لاكتشاف ما إذاcمتحيّزة أم لا',
+        'description_ar' => 'بمناسبة اليوم العالمي للمرأة، شارك باختبار "لنكسر التحيّز" لاكتشاف ما إذا متحيّزة أم لا',
         'description_en' => 'For International Women\'s Day 2022, take part in Alnahda\'s #BreakTheBias quiz to discover whether your choices are gender-biased or not.',
         'author_ar' => 'النهضة',
         'author_en' => 'Alnahda',
