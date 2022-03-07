@@ -96,7 +96,7 @@ html[lang='ar'] #app {
     margin-left: auto;
     transition: 0.1s;
     border: 1px solid var(--color-white);
-    padding: 2.5px;
+    padding: 2.5px 10px;
     border-radius: 10px;
 }
 
@@ -109,7 +109,6 @@ html[lang='ar'] #app {
 html[lang='ar'] .header .locale {
     margin-left: unset;
     margin-right: auto;
-    padding: 2.5px 10px;
 }
 
 .header .locale:hover {
