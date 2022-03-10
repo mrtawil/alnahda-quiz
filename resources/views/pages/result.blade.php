@@ -36,7 +36,7 @@
                                     <input type="email" name="email" id="email" class="form-input-text form-control" required>
                                 </div>
                                 <div class="form-input-container">
-                                    <label for="coffee_shop" class="form-label">@lang('strings.The Café')<span class="text-danger">*</span></label>
+                                    <label for="coffee_shop" class="form-label">@lang('strings.The Café')</label>
                                     <div class="option-container" v-for="(coffee_shop, index) in coffee_shops" v-on:click="onCoffeeShopClick(index)" :class="{'chosen': index == coffee_shop_chosen, 'invalid': coffee_shop_invalid}">
                                         <div class="option-logo-container">
                                             <img class="option-logo" :src='assets_path + coffee_shop.logo' :class="index == coffee_shop_chosen ? coffee_shop.logo_class_selected : coffee_shop.logo_class">
