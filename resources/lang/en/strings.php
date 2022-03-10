@@ -16,7 +16,7 @@ return [
     "GET YOUR COFFEE" => "GET YOUR COFFEE",
     "FREE COFFEE!" => "FREE COFFEE!",
     "Voucher Number" => "Voucher Number",
-    "Valid from March 8 - 10" => "Valid from March 8 - 10",
+    "Valid from March 8 - 14" => "Valid from March 8 - 14",
     "Valid for one time use only" => "Valid for one time use only",
     "Take a screenshot and share it with the barista" => "Take a screenshot and\nshare it with the barista",
     "Share the test with your friends" => "Share the test with your friends",
