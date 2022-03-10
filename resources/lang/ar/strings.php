@@ -12,7 +12,7 @@ return [
     "The quiz will only take a few minutes" => "يستغرق الإختبار بضع دقائق فقط",
     "Imagine a world free of bias" => "تخيّل عالماً متوازناً خالٍ من التحيّز والتميّز, عالم منصف ومتنوع وشامل. من أجل تحقيق هذا الهدف، نحن بحاجة لإعادة النظر في تصرفاتنا والقرارات التي نتخذها بشكل يومي.",
     "COFFEE VOUCHER" => "قسيمة القهوة",
-    "Choose the café to get your voucher" => "اختار/ي المقهى لتحصيل قهوتك",
+    "The Café" => "المقهى",
     "GET YOUR COFFEE" => "احصل/ي على قهوتك",
     "FREE COFFEE!" => "قهوة مجانية!",
     "Voucher Number" => "رقم القسيمة",

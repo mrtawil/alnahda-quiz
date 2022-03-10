@@ -12,7 +12,7 @@ return [
     "The quiz will only take a few minutes" => "The quiz will only take a few minutes",
     "Imagine a world free of bias" => "Imagine a world free of bias, stereotypes, and discrimination. A world that is diverse, equitable, and inclusive. To achieve this vision, it is crucial we re-evaluate our own thoughts and actions - all day, every day.",
     "COFFEE VOUCHER" => "COFFEE VOUCHER",
-    "Choose the café to get your voucher" => "Choose the café to get your voucher",
+    "The Café" => "The Café",
     "GET YOUR COFFEE" => "GET YOUR COFFEE",
     "FREE COFFEE!" => "FREE COFFEE!",
     "Voucher Number" => "Voucher Number",

@@ -6,7 +6,7 @@ const app = new Vue({
         voucher_number: null,
         locale: locale,
         coffee_shops: coffee_shops,
-        coffee_shop_chosen: null,
+        coffee_shop_chosen: 0,
         coffee_shop_invalid: false,
         share_on: false,
     },
