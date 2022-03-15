@@ -17,42 +17,44 @@
                 <div class="title-description">@lang('strings.Imagine a world free of bias')</div>
             </div>
 
-            <div class="form-container">
-                <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit" id="form">
-                    @csrf
-                    <div class="form-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        <span>@lang('strings.COFFEE VOUCHER')</span>
-                        <img src="{{ URL::asset('assets/media/svg/arrow-down-solid.svg') }}" alt="" class="arrow">
-                    </div>
-                    <div id="collapseOne" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <div class="form-body">
-                                <div class="form-input-container">
-                                    <label for="name" class="form-label">@lang('strings.Name')<span class="text-danger">*</span></label>
-                                    <input type="text" name="name" id="name" class="form-input-text form-control" required>
-                                </div>
-                                <div class="form-input-container">
-                                    <label for="email" class="form-label">@lang('strings.Email')<span class="text-danger">*</span></label>
-                                    <input type="email" name="email" id="email" class="form-input-text form-control" required>
-                                </div>
-                                <div class="form-input-container">
-                                    <label for="coffee_shop" class="form-label">@lang('strings.The Café')</label>
-                                    <div class="option-container" v-for="(coffee_shop, index) in coffee_shops" v-on:click="onCoffeeShopClick(index)" :class="{'chosen': index == coffee_shop_chosen, 'invalid': coffee_shop_invalid}">
-                                        <div class="option-logo-container">
-                                            <img class="option-logo" :src='assets_path + coffee_shop.logo' :class="index == coffee_shop_chosen ? coffee_shop.logo_class_selected : coffee_shop.logo_class">
-                                        </div>
-                                        <div class="option-separator"></div>
-                                        <span class="option-text">@{{ coffee_shop["title_" + locale] }}</span>
+            @if (config('alnahda.voucher_active'))
+                <div class="form-container">
+                    <form action="{{ route('pages.claim') }}" method="POST" class="form needs-validation" novalidate v-on:submit.prevent="onFormSubmit" id="form">
+                        @csrf
+                        <div class="form-header collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <span>@lang('strings.COFFEE VOUCHER')</span>
+                            <img src="{{ URL::asset('assets/media/svg/arrow-down-solid.svg') }}" alt="" class="arrow">
+                        </div>
+                        <div id="collapseOne" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="form-body">
+                                    <div class="form-input-container">
+                                        <label for="name" class="form-label">@lang('strings.Name')<span class="text-danger">*</span></label>
+                                        <input type="text" name="name" id="name" class="form-input-text form-control" required>
                                     </div>
-                                </div>
-                                <div class="form-submit-container">
-                                    <button type="submit" class="form-submit">@lang('strings.GET YOUR COFFEE')</button>
+                                    <div class="form-input-container">
+                                        <label for="email" class="form-label">@lang('strings.Email')<span class="text-danger">*</span></label>
+                                        <input type="email" name="email" id="email" class="form-input-text form-control" required>
+                                    </div>
+                                    <div class="form-input-container">
+                                        <label for="coffee_shop" class="form-label">@lang('strings.The Café')</label>
+                                        <div class="option-container" v-for="(coffee_shop, index) in coffee_shops" v-on:click="onCoffeeShopClick(index)" :class="{'chosen': index == coffee_shop_chosen, 'invalid': coffee_shop_invalid}">
+                                            <div class="option-logo-container">
+                                                <img class="option-logo" :src='assets_path + coffee_shop.logo' :class="index == coffee_shop_chosen ? coffee_shop.logo_class_selected : coffee_shop.logo_class">
+                                            </div>
+                                            <div class="option-separator"></div>
+                                            <span class="option-text">@{{ coffee_shop["title_" + locale] }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-submit-container">
+                                        <button type="submit" class="form-submit">@lang('strings.GET YOUR COFFEE')</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
+            @endif
         </div>
 
         <div class="claim fade-in" v-else>
